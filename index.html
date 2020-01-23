@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Ремонт под ключ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="fonts/stylesheet.css">
     <link rel="stylesheet" href="fonts/ico-moon/style.css">
     <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/fotorama.css">
-    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="shortcut icon" href="img/logo.png" type="image/png">
 </head>
 <body>
 <div class="first-screen">
@@ -18,7 +19,7 @@
             <div class="header-inner-logo">
                 <div class="header-inner-logo-left">
                     <img src="img/logo.png" alt="">
-                    <p class="header-inner-logo-left__text">ремонт<br>под ключ</p>
+                    <p class="header-inner-logo-left__text">ремонт <br>под ключ</p>
                 </div>
                 <div class="header-inner-logo-right">
                     <p class="header-inner-logo-right__text">Более 7 лет специализируемся
@@ -27,7 +28,7 @@
                     </p>
                 </div>
             </div>
-            <div class="header-inner-price">
+            <div class=" header-inner-price btn-down">
                 <div class="header-inner-price__mockup">
                     <img src="img/price_mockup.png" alt="">
                 </div>
@@ -38,13 +39,13 @@
                     <p class="socials__title">Задайте вопрос напрямую в:
                     </p>
                     <div class="socials-items">
-                        <div class="socials-items__item socials-items__item--viber">
-                            <span class="icon-viber"></span>
+                        <div onclick="window.open('viber://chat?number=+375291936245');" class="socials-items__item socials-items__item--viber" onclick="yaCounter49321939.reachGoal('mess'); return true;">
+                           <span class="icon-viber"></span>
                             <p>Viber</p>
                         </div>
-                        <div class="socials-items__item socials-items__item--tg">
+                        <div onclick="window.open('tg://resolve?domain=YauheniHuretski');" class="socials-items__item socials-items__item--tg" onclick="yaCounter49321939.reachGoal('mess'); return true;">
                             <span class="icon-tg"></span>
-                            <p>Telegram</p>
+                           <p>Telegram</p>
                         </div>
                     </div>
                 </div>
@@ -59,7 +60,7 @@
                             <span class="icon-Phones"></span>
                             <a href="tel:+375291936245">+375 29 193 62 45</a>
                         </div>
-                        <p class="contacts-phone__recall">
+                        <p class="contacts-phone__recall consult">
                             Перезвоните мне
                         </p>
                     </div>
@@ -67,41 +68,38 @@
             </div>
         </header>
         <div class="first-screen-content">
-            <p class="first-screen-content__uptitle">
+            <p class="first-screen-content__uptitle subtitle-first">
                 Планируете ремонт в новостройке?
             </p>
-            <h1>сделаем качественный премиальный
+            <h1 class="title-first">сделаем качественный премиальный
                 ремонт вашей квартиры точно в срок
-                и с гарантией 2 года</h1>
-            <p class="first-screen-content__desc">
+                и с гарантией 5 лет</h1>
+            <p class="first-screen-content__desc subtitle-first">
                 по европейским <span>стандартам ISO</span>
             </p>
             <div class="first-screen-content-adv">
                 <div class="first-screen-content-adv__item">
-                    <img src="img/adv1.svg" alt="">
+                    <img src="img/advant1.svg" alt="">
                     <p>Бесплатный выезд инженера-
                         прораба и смета на
                         следующий день</p>
                 </div>
                 <div class="first-screen-content-adv__item">
-                    <img src="img/adv2.svg" alt="">
+                    <img src="img/advant2.svg" alt="">
                     <p>Поэтапная оплата
                         по договору с
                         гарантией 5 лет</p>
                 </div>
                 <div class="first-screen-content-adv__item">
-                    <img src="img/adv3.svg" alt="">
-                    <p>Адекватная
-                        стоимость работ,
-                        всего от 60 руб/м2</p>
+                    <img src="img/advant3.svg" alt="">
+                    <p>Средняя стоимость ремонта от 120$ м<sup>2</sup></p>
                 </div>
             </div>
             <div class="btn-main-wrap">
-                <button class="btn btn-main">
-                    <span class="icon-calc"></span>Калькулятор стоимости ремонта
-                </button>
+                <button class="btn btn-main test-scroll">
+                    <span class="icon-calc"></span>Калькулятор стоимости ремонта</button>
                 <div class="btn-main-present">
-                    <p>Ответьте на 6 вопросов
+                    <p>Ответьте на 7 вопросов
                         и получите 1 из 3 подарков
                         на выбор!</p>
                     <img src="img/present.png" alt=""></div>
@@ -118,12 +116,12 @@
                 <div class="test-item__header">
                     <h2 class="section-title section-title--black">Рассчитайте предварительную стоимость
                         и сроки ремонта Вашего помещения</h2>
-                    <p class="test-item__desc">Ответьте на 6 вопросов и  получите гарантированный подарок на выбор.</p>
+                    <p class="test-item__desc">Ответьте на 7 вопросов и&nbsp; получите гарантированный подарок на выбор.</p>
 
                     <div class="test-item__progress">
                         <div class="test-item__number">
                             <span class="test-item__number-furst">01</span>
-                            <span class="test-item__number-all">/ 04</span>
+                            <span class="test-item__number-all">/ 07</span>
                             <span class="test-item__number-text">Почти готово!</span>
                         </div>
 
@@ -186,15 +184,17 @@
                 </div>
 
                 <div class="test__content">
-                    <div class="test__img">
+                    <div class="test__img pseudo">
                         <p class="test__img-title">До выбора подарка осталось:</p>
                         <span class="test__img-count"></span>
-                        <img src="img/present_big.png" alt="">
+                        <div id="test__img-price" class="test__img-price"></div>
+                        <img id="present_img" src="img/present_big.png" alt="">
 
                     </div>
                     <div class="test-slider__wrap">
-                        <form action="#" id="testForm" method="POST">
-                            <input type="hidden" name="formname" value="quiz-form">
+                        <form action="#" id="testForm" class="test-form" method="POST" onsubmit="yaCounter49321939.reachGoal('raschet')">
+                            <input type="hidden" name="formname" value="test">
+
                             <div class="test-slider">
                                 <div class="test-slider__item">
                                     <h3 class="test-slider-title">
@@ -243,26 +243,26 @@
                                             </label>
 
                                             <input type="radio" name="roofType" class="customRadio_radio"
-                                                   id="roofType-3" value="Котедж">
+                                                   id="roofType-3" value="Коттедж">
 
                                             <label for="roofType-3" class="customRadio_label">
 										    	   <span class="customRadio_label-cirkle">
 										    	   </span>
-                                                <span>Котедж</span>
+                                                <span>Коттедж</span>
                                             </label>
                                         </div>
                                     </div>
 
-                                    <div class="btn--wrap">
+                                    <!-- <div class="btn--wrap">
                                         <button class="btn-test next-test">
                                             <span>Далее</span>
                                         </button>
-                                    </div>
+                                    </div> -->
 
                                 </div>
-                                <div class="test-slider__item">
+                                <div class="test-slider__item" style="display: none;">
                                     <h3 class="test-slider-title test-slider-title-m">
-                                        Укажите количество комнат</h3>
+                                        Укажите ориентировочную площадь</h3>
 
                                     <div class="test-slider__content">
                                         <div class="test-slider__img">
@@ -291,27 +291,19 @@
 
 
                                     </div>
-                                    <div class="btn--wrap">
-                                        <button class=" btn-test prev-test">
-                                            <span>Назад</span>
-                                        </button>
-                                        <button class="btn-test next-test">
-                                            <span>Далее</span>
 
-                                        </button>
-                                    </div>
                                 </div>
-                                <div class="test-slider__item">
+                                <div class="test-slider__item" style="display: none;">
 									<span class="question question-test" style="display: none;">
 										<svg xmlns="http://www.w3.org/2000/svg"
                                              xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="20"
                                              viewBox="0 0 24 20"><defs><g id="questionSvg"><g
-                                                transform="translate(-981 -631)"><path id="2twwa"
-                                                                                       d="M1005 641c0 5.523-4.991 10-11.149 10-2.263 0-4.368-.606-6.126-1.645l-5.773 1.541a.773.773 0 0 1-.79-.253.715.715 0 0 1-.068-.807l2.637-4.635a9.11 9.11 0 0 1-1.029-4.201c0-5.523 4.992-10 11.15-10 6.157 0 11.148 4.477 11.148 10zm-10.064 4.065c0-.592-.495-1.073-1.103-1.073-.609 0-1.104.481-1.104 1.073 0 .591.495 1.072 1.104 1.072.608 0 1.103-.48 1.103-1.072zm1.59-6.584c0-1.444-1.208-2.618-2.693-2.618-1.486 0-2.694 1.174-2.694 2.618 0 .46.384.833.857.833a.846.846 0 0 0 .856-.833c0-.525.44-.953.98-.953.541 0 .981.428.981.953 0 .653-.315.862-.791 1.179-.441.292-1.046.694-1.046 1.5v1.207c0 .46.384.833.857.833a.846.846 0 0 0 .856-.833v-1.12c.054-.045.155-.116.3-.213.575-.382 1.537-1.021 1.537-2.553z"></path></g></g></defs><use
+                                                transform="translate(-981 -631)">
+                                                <path id="2twwa" d="M1005 641c0 5.523-4.991 10-11.149 10-2.263 0-4.368-.606-6.126-1.645l-5.773 1.541a.773.773 0 0 1-.79-.253.715.715 0 0 1-.068-.807l2.637-4.635a9.11 9.11 0 0 1-1.029-4.201c0-5.523 4.992-10 11.15-10 6.157 0 11.148 4.477 11.148 10zm-10.064 4.065c0-.592-.495-1.073-1.103-1.073-.609 0-1.104.481-1.104 1.073 0 .591.495 1.072 1.104 1.072.608 0 1.103-.48 1.103-1.072zm1.59-6.584c0-1.444-1.208-2.618-2.693-2.618-1.486 0-2.694 1.174-2.694 2.618 0 .46.384.833.857.833a.846.846 0 0 0 .856-.833c0-.525.44-.953.98-.953.541 0 .981.428.981.953 0 .653-.315.862-.791 1.179-.441.292-1.046.694-1.046 1.5v1.207c0 .46.384.833.857.833a.846.846 0 0 0 .856-.833v-1.12c.054-.045.155-.116.3-.213.575-.382 1.537-1.021 1.537-2.553z"></path></g></g></defs><use
                                                 xlink:href="#questionSvg"></use></svg>
 									</span>
                                     <h3 class="test-slider-title">
-                                        Укажите ориентировочную площадь </h3>
+                                        Укажите количество комнат </h3>
                                     <div class="test-slider__content">
                                         <div class="test-slider__data test-slider__data--row">
                                             <div class="test-slider__elem test-slider__elem-radio">
@@ -369,17 +361,9 @@
 
                                     </div>
 
-                                    <div class="btn--wrap">
-                                        <button class=" btn-test prev-test">
-                                            <span>Назад</span>
-                                        </button>
-                                        <button class=" btn-test next-test">
-                                            <span>Далее</span>
-                                        </button>
-                                    </div>
 
                                 </div>
-                                <div class="test-slider__item">
+                                <div class="test-slider__item" style="display: none;">
                                     <h3 class="test-slider-title">
                                         Выберите тип ремонта</h3>
                                     <div class="test-slider__content">
@@ -422,7 +406,7 @@
                                             </label>
                                         </div>
                                         <div class="test-slider__elem test-slider__elem-min">
-                                            <label for="construction-2">
+                                            <label for="construction-3">
 												   <span class="customRadio__img"
                                                          style="background: url(img/item4_3.jpg) no-repeat center; background-size: cover;">
 												   </span>
@@ -442,23 +426,15 @@
 
                                     </div>
 
-                                    <div class="btn--wrap">
-                                        <button class=" btn-test prev-test">
-                                            <span>Назад</span>
-                                        </button>
-                                        <button class="btn-test next-test">
-                                            <span>Далее</span>
-                                        </button>
-                                    </div>
 
                                 </div>
-                                <div class="test-slider__item">
+                                <div class="test-slider__item" style="display: none;">
                                     <h3 class="test-slider-title">
                                         Ремонт будем делать по дизайн-проекту? </h3>
                                     <div class="test-slider__content">
                                         <div class="test-slider__data">
                                             <div class="test-slider__elem test-slider__elem-radio">
-                                                <input type="radio" name="orderRoof" class="customRadio_radio"
+                                                <input type="radio" name="orderRoof22" class="customRadio_radio"
                                                        id="orderRoof-5_1" value="Да у меня есть дизайн-проект">
 
                                                 <label for="orderRoof-5_1"
@@ -470,7 +446,7 @@
                                                 </label>
                                             </div>
                                             <div class="test-slider__elem test-slider__elem-radio">
-                                                <input type="radio" name="orderRoof" class="customRadio_radio"
+                                                <input type="radio" name="orderRoof22" class="customRadio_radio"
                                                        id="orderRoof-5_2" value="Нет, без дизаайн-проекта">
 
                                                 <label for="orderRoof-5_2"
@@ -482,7 +458,7 @@
                                                 </label>
                                             </div>
                                             <div class="test-slider__elem test-slider__elem-radio">
-                                                <input type="radio" name="orderRoof" class="customRadio_radio"
+                                                <input type="radio" name="orderRoof22" class="customRadio_radio"
                                                        id="orderRoof-5_3" value="Мне необходим дизайн-проект">
 
                                                 <label for="orderRoof-5_3"
@@ -501,23 +477,15 @@
 
                                     </div>
 
-                                    <div class="btn--wrap">
-                                        <button class=" btn-test prev-test">
-                                            <span>Назад</span>
-                                        </button>
-                                        <button class="btn-test next-test">
-                                            <span>Далее</span>
-                                        </button>
-                                    </div>
 
                                 </div>
-                                <div class="test-slider__item">
+                                <div class="test-slider__item" style="display: none;">
                                     <h3 class="test-slider-title">
                                         Как скоро вам необходимо приступить к ремонту?</h3>
                                     <div class="test-slider__content">
                                         <div class="test-slider__data">
                                             <div class="test-slider__elem test-slider__elem-radio">
-                                                <input type="radio" name="orderRoof" class="customRadio_radio"
+                                                <input type="radio" name="orderRoof33" class="customRadio_radio"
                                                        id="orderRoof-6_1" value="В течение недели">
 
                                                 <label for="orderRoof-6_1"
@@ -529,7 +497,7 @@
                                                 </label>
                                             </div>
                                             <div class="test-slider__elem test-slider__elem-radio">
-                                                <input type="radio" name="orderRoof" class="customRadio_radio"
+                                                <input type="radio" name="orderRoof33" class="customRadio_radio"
                                                        id="orderRoof-6_2" value="В течение месяца">
 
                                                 <label for="orderRoof-6_2"
@@ -541,8 +509,8 @@
                                                 </label>
                                             </div>
                                             <div class="test-slider__elem test-slider__elem-radio">
-                                                <input type="radio" name="orderRoof" class="customRadio_radio"
-                                                       id="orderRoof-6_3" value="Мне необходим дизайн-проект">
+                                                <input type="radio" name="orderRoof33" class="customRadio_radio"
+                                                       id="orderRoof-6_3" value="Все зависит от цены">
 
                                                 <label for="orderRoof-6_3"
                                                        class="customRadio_label customRadio_label-fix">
@@ -555,77 +523,69 @@
 
                                         </div>
                                         <div class="test-slider__img test-slider__img--2">
-                                            <img src="img/img5.png" alt="">
+                                            <img src="img/6_1.png" alt="">
                                         </div>
 
                                     </div>
 
-                                    <div class="btn--wrap">
-                                        <button class=" btn-test prev-test">
-                                            <span>Назад</span>
-                                        </button>
-                                        <button class="btn-test next-test">
-                                            <span>Далее</span>
-                                        </button>
-                                    </div>
 
                                 </div>
-                                <div class="test-slider__item">
+                                <div class="test-slider__item test-presents-slide" style="display: none;">
                                     <h3 class="test-slider-title">
                                         Выберите Ваш подарок</h3>
                                     <div class="test-slider__content">
 
 
                                         <div class="test-slider__elem test-slider__elem-min">
-                                            <label for="present-1">
+                                            <label for="qn7_1">
 												   <span class="customRadio__img"
                                                          style="background: url(img/item7_1.jpg) no-repeat center; background-size: cover;">
 												   </span>
                                             </label>
 
-                                            <input type="radio" name="construction" class="customRadio_radio"
-                                                   id="present-1" value="Капитальный">
+                                            <input type="radio" name="qn7" class="customRadio_radio"
+                                                   id="qn7_1" value="Картина">
 
-                                            <label for="present-1" class="customRadio_label">
+                                            <label for="qn7_1" class="customRadio_label">
 												   <span class="customRadio_label-cirkle">
 												   </span>
-                                                <span>Подарок 1</span>
+                                                <span>Картина нитью(стоимостью 299 рублей)</span>
 
                                             </label>
                                         </div>
 
 
                                         <div class="test-slider__elem test-slider__elem-min">
-                                            <label for="present-2">
+                                            <label for="qn7_2">
 												   <span class="customRadio__img"
-                                                         style="background: url(img/item7_1.jpg) no-repeat center; background-size: cover;">
+                                                         style="background: url(img/item7_2.jpg) no-repeat center; background-size: cover;">
 												   </span>
                                             </label>
 
-                                            <input type="radio" name="construction" class="customRadio_radio"
-                                                   id="present-2" value="Косметический">
+                                            <input type="radio" name="qn7" class="customRadio_radio"
+                                                   id="qn7_2" value="Фотосъемка">
 
-                                            <label for="present-2" class="customRadio_label">
+                                            <label for="qn7_2" class="customRadio_label">
 												   <span class="customRadio_label-cirkle">
 												   </span>
-                                                <span>Подарок 2</span>
+                                                <span>Фотосъемка помещения после ремонта</span>
 
                                             </label>
                                         </div>
                                         <div class="test-slider__elem test-slider__elem-min">
-                                            <label for="present-3">
+                                            <label for="qn7_3">
 												   <span class="customRadio__img"
-                                                         style="background: url(img/item7_1.jpg) no-repeat center; background-size: cover;">
+                                                         style="background: url(img/item7_3.jpg) no-repeat center; background-size: cover;">
 												   </span>
                                             </label>
 
-                                            <input type="radio" name="construction" class="customRadio_radio"
-                                                   id="present-3" value="Стандартный">
+                                            <input type="radio" name="qn7" class="customRadio_radio"
+                                                   id="qn7_3" value="Консультация">
 
-                                            <label for="present-3" class="customRadio_label">
+                                            <label for="qn7_3" class="customRadio_label">
 												   <span class="customRadio_label-cirkle">
 												   </span>
-                                                <span>Подарок 3</span>
+                                                <span>Консультация руководителя</span>
 
                                             </label>
                                         </div>
@@ -633,17 +593,9 @@
 
                                     </div>
 
-                                    <div class="btn--wrap">
-                                        <button class=" btn-test prev-test">
-                                            <span>Назад</span>
-                                        </button>
-                                        <button class="btn-test next-test">
-                                            <span>Далее</span>
-                                        </button>
-                                    </div>
 
                                 </div>
-                                <div class="test-slider__item">
+                                <div class="test-slider__item" style="display: none;">
                                     <div class="test-slider__item-end">
                                         <div class="test-slider__item-end_inner">
                                             <p class="test-slider__item-end__complete">
@@ -651,12 +603,12 @@
                                             </p>
                                             <div class="test-slider__item-end__send">
                                                 <p class="test-slider__item-end__title">
-                                                    Куда отправить Вам рассчет?
+                                                    Куда отправить Вам расчет?
                                                 </p>
                                                 <div class="test-slider__item-end__send__social">
                                                     <div class="test-slider__num-item">
 
-                                                        <input type="radio" name="numbers" class="customRadio_radio"
+                                                        <input type="radio" name="numbersSoc" class="customRadio_radio"
                                                                id="numbers-1" checked="" value="Viber" tabindex="0">
 
                                                         <label for="numbers-1"
@@ -671,7 +623,7 @@
                                                     </div>
                                                     <div class="test-slider__num-item">
 
-                                                        <input type="radio" name="numbers" class="customRadio_radio"
+                                                        <input type="radio" name="numbersSoc" class="customRadio_radio"
                                                                id="numbers-2" checked="" value="Озвучить по телефону"
                                                                tabindex="0">
 
@@ -687,7 +639,7 @@
                                                     </div>
                                                     <div class="test-slider__num-item">
 
-                                                        <input type="radio" name="numbers" class="customRadio_radio"
+                                                        <input type="radio" name="numbersSoc" class="customRadio_radio"
                                                                id="numbers-3" checked="" value="Выслать по СМС"
                                                                tabindex="0">
 
@@ -706,11 +658,11 @@
                                                 </div>
                                             </div>
                                             <div class="inputs_form">
-                                                <div class="quiz_tel_wrap"><span class="icon-Phones"></span><input
-                                                        class="quiz_tel" type="tel" id="tel"
-                                                        placeholder="+375 (**) *** ** **">
+                                                <div class="main-input"><span class="icon-Phones"></span><input
+                                                        class="main-input__inner" type="tel" id="tel"
+                                                        placeholder="+375 (**) *** ** **" name="yourPhone" required>
                                                 </div>
-                                                <button class="btn_quiz btn" type="submit">ПОЛУЧИТЬ РЕЗУЛЬТАТ РАССЧЕТА
+                                                <button class="btn_quiz btn" type="submit">ПОЛУЧИТЬ РЕЗУЛЬТАТ РАСЧЕТА
                                                 </button>
 
                                             </div>
@@ -720,6 +672,19 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+
+                            <div class="text-subbtn">
+                                Выберите вариант ответа или введите значение
+                            </div>
+                            <div class="btn--wrap test__btn-block">
+                                <button class=" btn-test prev-test" disabled="true">
+                                    <span>Назад</span>
+                                </button>
+                                <button class="btn-test next-test" disabled="true">
+                                    <span>Далее</span>
+
+                                </button>
                             </div>
                         </form>
                     </div>
@@ -736,7 +701,9 @@
         <div class="third-screen-content">
             <div class="third-screen-content-row">
                 <div class="third-screen-content-row__img">
-                    <img src="img/3_1.png" alt="">
+                    <div class="parallax-scene" id="scene-3">
+                        <img src="img/3_1.png" alt="" data-depth="1">
+                    </div>
                 </div>
                 <div class="third-screen-content-row__text">
                     <p class="third-screen-content-row__text__title">
@@ -744,11 +711,11 @@
                     </p>
                     <div class="third-screen-content-row__text__item">
                         <span class="icon-massage"></span>
-                        <p>Вам говорят: "Смету мы рассчитаем по телефону, а бригада будет уже завтра..."</p>
+                        <p>Вам говорят:&nbsp;"Смету мы рассчитаем по телефону, а бригада будет уже завтра..."</p>
                     </div>
                     <div class="third-screen-content-row__text__item">
                         <span class="icon-false"></span>
-                        <p>По факту бригада будет ехать к Вам на объект неделю.</p>
+                        <p>По факту бригада будет ехать к Вам на объект неделю</p>
                     </div>
                 </div>
             </div>
@@ -768,12 +735,16 @@
                     </div>
                 </div>
                 <div class="third-screen-content-row__img">
-                    <img src="img/3_2.png" alt="">
+                    <div class="parallax-scene" id="scene-4">
+                        <img src="img/3_2.png" alt="" data-depth="1.4">
+                    </div>
                 </div>
             </div>
             <div class="third-screen-content-row">
                 <div class="third-screen-content-row__img">
-                    <img src="img/3_3.png" alt="">
+                    <div class="parallax-scene" id="scene-5">
+                        <img src="img/3_3.png" alt="" data-depth="3">
+                    </div>
                 </div>
                 <div class="third-screen-content-row__text">
                     <p class="third-screen-content-row__text__title">
@@ -781,12 +752,12 @@
                     </p>
                     <div class="third-screen-content-row__text__item">
                         <span class="icon-massage"></span>
-                        <p>Работают у нас только граждане РФ с опытом работы от 10 лет...</p>
+                        <p>Работают у нас только граждане РБ с опытом работы от 10 лет...</p>
                     </div>
                     <div class="third-screen-content-row__text__item">
                         <span class="icon-false"></span>
                         <p>Не страшно, если к Вам на объект приедут работники из южных стран — страшно,<br>
-                            когда на объект приедут “рукожопы”, которые будут тянуть, но так ничего и не сделают.</p>
+                            когда на объект приедут “дилетанты”, которые будут тянуть, но так ничего и не сделают.</p>
                     </div>
                 </div>
             </div>
@@ -824,14 +795,14 @@
                     <p class="navigation-item-wrap__num">03</p>
                     <div class="navigation-item-wrap__text">
                         <p class="navigation-item-wrap__text__title">Принцип</p>
-                        <p class="navigation-item-wrap__text__desc">Гарантии не на словах</p>
+                        <p class="navigation-item-wrap__text__desc">Профессиональная бригада</p>
                     </div>
                 </div>
                 <div class="navigation-item-wrap">
                     <p class="navigation-item-wrap__num">04</p>
                     <div class="navigation-item-wrap__text">
                         <p class="navigation-item-wrap__text__title">Принцип</p>
-                        <p class="navigation-item-wrap__text__desc">С Вашим минимальным участием</p>
+                        <p class="navigation-item-wrap__text__desc">Не "гнем" цены</p>
                     </div>
                 </div>
             </div>
@@ -890,19 +861,21 @@
                             </div>
                         </div>
                     </div>
-                    <div class="fourth-screen-tabs-item-left-row">
+                    <form class="fourth-screen-tabs-item-left-row" onsubmit="yaCounter49321939.reachGoal('consult')">
+                        <input type="hidden" name="formname" value="rykovod">
                         <div class="fourth-screen-tabs-item-left-row-input">
-                            <div class="quiz_tel_wrap"><span class="icon-Phones"></span><input
-                                    class="quiz_tel" type="tel" id="tel2"
-                                    placeholder="+375 (**) *** ** **">
+                            <div class="main-input"><span class="icon-Phones"></span><input
+                                    class="main-input__inner" type="tel" id="tel2"
+                                    placeholder="+375 (**) *** ** **" name="yourPhone" required>
                             </div>
                         </div>
                         <div class="fourth-screen-tabs-item-left-row-btn">
-                            <div class="btn">
+                            <button class="btn">
                                 Услышать руководителя
-                            </div>
+                            </button>
+
                         </div>
-                    </div>
+                    </form>
                 </div>
                 <div class="fourth-screen-tabs-item-right">
 
@@ -910,8 +883,8 @@
                         <img src="img/dir.png" alt="">
                     </div>
                     <div class="guy guy-tab">
-                        <p class="guy__name">Евгений Герман</p>
-                        <p class="guy__work">Руководитель строительной компании ГуруСтрой.<br>
+                        <p class="guy__name">Евгений&nbsp;Гурецкий&nbsp;</p>
+                        <p class="guy__work">Руководитель строительной компании ГУРУ-СТРОЙ.<br>
                             Опыт работы — 12 лет</p>
                     </div>
                 </div>
@@ -976,12 +949,12 @@
                     </div>
 
                 </div>
-                <div class="fourth-screen-tabs-item-right">
+                <div class="fourth-screen-tabs-item-right tab-2-img">
                     <div class="fourth-screen-tabs-item-right__img">
-                        <img src="img/smeta.png" alt="">
+                        <img src="img/docs.png" alt="">
                     </div>
-                    <a class="fourth-screen-tabs-item-right__link">
-                        Посмотреть пример сметы
+                    <a href="docs/dogovor.pdf" class="fourth-screen-tabs-item-right__link" style="cursor: pointer;">
+                        Посмотреть договор
                     </a>
                 </div>
             </div>
@@ -1043,8 +1016,8 @@
                     </div>
 
                 </div>
-                <div class="fourth-screen-tabs-item-right">
-                    <div class="fourth-screen-tabs-item-right__img fourth-screen-tabs-item-right__img--kit"><img
+                <div class="fourth-screen-tabs-item-right tab-3-img">
+                    <div class="fourth-screen-tabs-item-right__img "><img
                             src="img/kit.png" alt=""></div>
                 </div>
             </div>
@@ -1052,13 +1025,13 @@
                 <div class="fourth-screen-tabs-item-left">
 
                     <p class="fourth-screen-tabs-item-left__title">Знаем рынок и предлагаем доступные цены
-                        для Минска и области — от 65 руб/м2</p>
+                        для Минска и района — ремонт квартиры&nbsp; от 120$ м<sup>2</sup> </p>
                     <div class="fourth-screen-tabs-item-left-price">
-                        <p class="fourth-screen-tabs-item-left-price__title">
+                        <p class="fourth-screen-tabs-item-left-price__title date-num">
                             Обновлено: 24 марта
                         </p>
                         <div class="fourth-screen-tabs-item-left-price__button ">
-                            <div class="fourth-screen-tabs-item-left-price__button__inner btn">
+                            <div class="fourth-screen-tabs-item-left-price__button__inner btn btn-down">
                                 СКАЧАТЬ ПРАЙС НА РЕМОНТ
                             </div>
                         </div>
@@ -1085,12 +1058,12 @@
     <div class="container">
         <h2 class="section-title section-title--black">
             Нас приглашают на Телеканал ОНТ, где мы
-            регулярно делимся своим опытом 
+            регулярно делимся своим опытом&nbsp;
         </h2>
         <div class="video-block">
             <div class="video-block__left">
                 <div class="video-block__left__item">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/2V4R_Pgvw2I" frameborder="0"
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ZVPxrOTTTOs" frameborder="0"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
                 </div>
@@ -1098,20 +1071,14 @@
             <div class="video-block__right">
                 <div class="video-block__right__header">
                     <p class="video-block__right__header__desc">Руководитель строительной комапании ГУРУ-СТРОЙ</p>
-                    <p class="video-block__right__header__title">Евгений Герман</p></div>
+                    <p class="video-block__right__header__title">Евгений&nbsp;Гурецкий&nbsp;</p></div>
                 <div class="video-block__right__content">
-                    <p class="video-block__right__content__title">Рассказал на телеканале ОНТ о том</p>
+                    <p class="video-block__right__content__title">Рассказал на телеканале ОНТ о том, как:</p>
                     <p class="video-block__right__content__text">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat.<br><br>
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                        mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    </p>
+                        Как можно существенно сэкономить на ремонте новостройки.<br>
+Всё просто – сотрудничайте с организациями.<br><br>
+
+•ГУРУ-СТРОЙ закупает все строительные материалы по цене ниже оптовой (за счёт клиентских скидок и бонусов). А, так как стройматериалы берут на себя весомую долю конечной стоимости, их цена важна. <br><br>•Конечная стоимость и специфика работ прописывается в договоре заранее, с учётом всех нюансов. Никаких внезапных подорожаний.<br><br>•Там же в договоре чётко прописаны сроки выполнения строительных работ, нарушение которых не в интересах организации.                    </p>
                 </div>
 
             </div>
@@ -1122,10 +1089,1632 @@
     <div class="container">
         <h2 class="section-title section-title--black">
             C 2003 года сдали 200+ квартир с ремонтом
-            различного типа и сложности 
+            различного типа и сложности&nbsp;
         </h2>
         <div class="project-block-wrap">
+
+
+
+
+            <!-- Квартира 90м.кв. ЖК Мегаполис-->
             <div class="project-block">
+                <div class="project-block__gallery">
+                    <!-- <div class="fotorama"
+                         data-nav="thumbs"
+                         data-allowfullscreen="true"
+                         data-width="100%"
+                          data-height="200">
+                        <a href="img/project1_1.jpg" data-thumb="img/project1_1.jpg"></a>
+                        <a href="img/project1_1.jpg" data-thumb="img/project1_1.jpg"></a>
+                        <a href="img/project1_1.jpg" data-thumb="img/project1_1.jpg"></a>
+                        <a href="img/project1_1.jpg" data-thumb="img/project1_1.jpg"></a>
+                        <a href="img/project1_1.jpg" data-thumb="img/project1_1.jpg"></a>
+
+                    </div> -->
+
+                    <div class="slider-top-proj">
+                        <a href="img/111/1y.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/111/1y.jpg"/>
+                        </a>
+                        <a href="img/111/3y.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/111/3y.jpg"/>
+                        </a>
+                        <a href="img/111/5y.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/111/5y.jpg"/>
+                        </a>
+                        <a href="img/111/6y.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/111/6y.jpg"/>
+                        </a>
+
+                        <a href="img/111/7y.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/111/7y.jpg"/>
+                        </a>
+                        <a href="img/111/8y.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/111/8y.jpg"/>
+                        </a>
+                        <a href="img/111/10y.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/111/10y.jpg"/>
+                        </a>
+                        <a href="img/111/11y.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/111/11y.jpg"/>
+                        </a>
+                        <a href="img/111/12y.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/111/12y.jpg"/>
+                        </a>
+                        <a href="img/111/17y.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/111/17y.jpg"/>
+                        </a>
+                        <a href="img/111/16y.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/111/16y.jpg"/>
+                        </a>
+                        <a href="img/111/19y.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/111/19y.jpg"/>
+                        </a>
+                        <a href="img/111/20y.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/111/20y.jpg"/>
+                        </a>
+                        <a href="img/111/25y.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/111/25y.jpg"/>
+                        </a>
+                        <a href="img/111/26y.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/111/26y.jpg"/>
+                        </a>
+                        <a href="img/111/29y.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/111/28y.jpg"/>
+                        </a>
+                        <a href="img/111/29y.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/111/29y.jpg"/>
+                        </a>
+                        <a href="img/111/30y.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/111/30y.jpg"/>
+                        </a>
+                        <a href="img/111/35y.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/111/35y.jpg"/>
+                        </a>
+                        <a href="img/111/39y.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/111/39y.jpg"/>
+                        </a>
+                        <a href="img/111/40y.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/111/40y.jpg"/>
+                        </a>
+                        <a href="img/111/41y.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/111/41y.jpg"/>
+                        </a>
+
+
+                    </div>
+
+                    <div class="slider-nav-proj">
+
+                     <div class="slider-nav-proj-item">
+                           <img data-lazy="img/111/1y.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/111/3y.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/111/5y.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/111/6y.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/111/7y.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/111/8y.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/111/10y.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/111/11y.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/111/12y.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/111/17y.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/111/16y.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/111/19y.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/111/20y.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/111/25y.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/111/26y.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/111/28y.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/111/29y.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/111/30y.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/111/35y.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/111/39y.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/111/40y.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/111/41y.jpg"/>
+                       </div>
+                    </div>
+                </div>
+                <div class="project-block-info">
+                    <p class="project-block-info__title">Квартира в ЖК Грушевский посад для
+молодой семьи с двумя детьми подростками</p>
+                    <div class="project-block-info-table">
+                        <div class="project-block-info-table__row">
+                            <div class="project-block-info-table__row__left">
+                                <div class="project-block-info-table__row__left__ico">
+                                    <img src="img/table1.svg" alt="">
+                                </div>
+                                <p class="project-block-info-table__row__left__title">
+                                    Тип жилья:
+                                </p>
+                            </div>
+                            <div class="project-block-info-table__row__right">
+                                <div class="project-block-info-table__row__right__desc"><p
+                                        class="project-block-info-table__row__right__desc__text">Новостройка</p></div>
+                            </div>
+                        </div>
+                        <div class="project-block-info-table__row">
+                            <div class="project-block-info-table__row__left">
+                                <div class="project-block-info-table__row__left__ico">
+                                    <img src="img/table2.svg" alt="">
+                                </div>
+                                <p class="project-block-info-table__row__left__title">
+                                    Площадь:
+                                </p>
+                            </div>
+                            <div class="project-block-info-table__row__right">
+                                <div class="project-block-info-table__row__right__desc"><p
+                                        class="project-block-info-table__row__right__desc__text">111 м<sup>2</sup></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-block-info-table__row">
+                            <div class="project-block-info-table__row__left">
+                                <div class="project-block-info-table__row__left__ico">
+                                    <img src="img/table3.svg" alt="">
+                                </div>
+                                <p class="project-block-info-table__row__left__title">
+                                    Срок выполнения:
+                                </p>
+                            </div>
+                            <div class="project-block-info-table__row__right">
+                                <div class="project-block-info-table__row__right__desc"><p
+                                        class="project-block-info-table__row__right__desc__text">30 рабочих дней</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-block-info-table__row">
+                            <div class="project-block-info-table__row__left">
+                                <div class="project-block-info-table__row__left__ico">
+                                    <img src="img/table4.svg" alt="">
+                                </div>
+                                <p class="project-block-info-table__row__left__title">
+                                    задача:
+                                </p>
+                            </div>
+                            <div class="project-block-info-table__row__right">
+                                <div class="project-block-info-table__row__right__desc"><p
+                                        class="project-block-info-table__row__right__desc__text"><span style="mso-bidi-font-family:Arial;color:black;
+background:white">Современный интерьер в духе контемпорари – это направление, в
+котором &nbsp;мы в дальнейшем работали, было
+выбрано&nbsp; при первой же встрече.
+
+Стояла задача увеличить пространство визуально, по максимуму
+наполнив его системой хранения, создать светлый уютный интерьер для
+жизни с лаконичной отделкой стен в теплой пастельной гамме с незначительным
+количеством ярких акцентов, комфортное пространство для всех членов семьи.&nbsp;</span></p>
+                                    <div class="project-block-info-table__row__right__desc__link">
+                                        Показать полностью
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-block-info-table__row">
+                            <div class="project-block-info-table__row__left">
+                                <div class="project-block-info-table__row__left__ico">
+                                    <img src="img/table5.svg" alt="">
+                                </div>
+                                <p class="project-block-info-table__row__left__title">
+                                    Особенность
+                                    ремонта:
+                                </p>
+                            </div>
+                            <div class="project-block-info-table__row__right">
+                                <div class="project-block-info-table__row__right__desc"><p
+                                        class="project-block-info-table__row__right__desc__text"><span style="mso-bidi-font-family:Arial;color:black;
+background:white">Учитывая, что в семье 2 сына подростка и у каждого свое увлечение
+было принято решение создать для каждого отдельную комнату.&nbsp;&nbsp;
+
+<span style="mso-bidi-font-family:Arial;color:black;
+background:white">Уникальность планировки в том, что нам удалось из 3-х жилых
+комнат получить 4 и при этом визуально сохранить пространство гостиной за счет
+оригинальных решений в зоне холла, вид на который открывается с прихожей.
+Перегородка из декоративных реек делит помещение на 2-е зоны:
+гостиную-кухню&nbsp; и холл.
+
+В
+результате перепланировки в центре гостиной оказалась несущая колонна, которая сыграла
+нам на руку. Между холлом и гостиной получили дополнительное пространство, где
+разместился шкаф для хранения книг, различных предметов интерьера.
+
+Декоративная
+световая панель, закрепленная к колонне со стороны коридора - еще одно
+оригинальное решение, которое создает дополнительную игру света.
+
+<span style="mso-bidi-font-family:Arial;color:black;
+background:white">Объединив кухню с гостиной, мы создали зону общения для всех
+членов семьи.
+
+Стены
+общественных помещений оклеены обоями в светлой серо-бежевой гамме.
+Межкомнатные двери в оливково-кремовой гамме
+прекрасно разбавляют общую серую гамму стен и пола.
+
+<span style="mso-bidi-font-family:Arial;color:black;
+background:white">Прихожая оборудована удобным шкафом для хранения одежды.
+
+<span style="mso-bidi-font-family:Arial;color:black;
+background:white">Мягкий элемент для сидения сложной формы повторяет изгибы
+стены и подчеркивает индивидуальность планировочного решения.&nbsp; Учтено место для хранения обуви и прочих
+необходимых средств для ухода за одеждой.&nbsp;
+
+Зеркало на всю высоту решает один из важнейших
+вопросов о расширении пространства. Украшает зеркальные полотна оригинальный
+подвесной консольный столик.
+
+<span style="mso-bidi-font-family:Arial;color:black;
+background:white">Яркий акцент при входе в квартиру - декоративная перегородка
+из деревянных реек с интегрированным консольным подвесным столиком. Вертикальное
+расположение реек визуально вытягивает пространство.
+
+Двигаясь в сторону гостиной, перед нами
+раскрывается образ целостного, наполненного воздухом и самыми необходимыми
+функциональными предметами, интерьера: &nbsp;угловой
+диван, тумба под телевизор и журнальный столик–трансформер. За декоративной
+перегородкой организован бар и зона хранения на всю высоту помещения.
+
+<span style="mso-bidi-font-family:Arial;color:black;
+background:white">Все пространство квартиры кроме спальных зон объединяет и
+визуально увеличивает пол из плитки под имитацию благородного светлого оттенка
+дерева.
+
+<span style="mso-bidi-font-family:Arial;color:black;
+background:white">Кухонный гарнитур выполнен в светлых тонах, почти сливаясь со
+стенами.&nbsp; Он лаконичен. Невысокие фасады
+над рабочей зоной создают легкость. Основной функцией служит скрытая система
+хранения и встроенная техника.&nbsp; Гарнитур
+исполнен в комбинации из матового стекла и лака пастельного бежево-сиреневого
+цвета. Завершает композицию обеденная группа с круглым раскладным столом и
+серо-сиреневые шторы.
+
+На
+балконе разместилась барная стойка как акцент, а также зеленые растения в
+навесных корзинах, прикрепленных к стене.&nbsp;
+
+
+<span style="mso-bidi-font-family:Arial;color:black;
+background:white">Ванная комната решена в спокойной гамме. За стеклянными
+полупрозрачными раздвижными дверями спрятана зона постирочной.&nbsp; Основное внимание берет на себя зона раковины
+и ванны со встроенными смесителями и нишами.
+
+<span style="mso-bidi-font-family:Arial;color:black;
+background:white">Гостевой санузел наполнен теплыми красками и энергией за счет
+пространства над раковиной и оригинальной мозайкой в зоне душевой. Двери
+скрытого монтажа без наличников, сливаются с декоративной отделкой стены,
+придавая эффект монолитности конструкции.
+
+<span style="mso-bidi-font-family:Arial;color:black;
+background:white">Дух мегаполиса, ритм и динамика - основа комнаты старшего
+сына. Этот эффект помог нам достичь уникальные обои с изображением части здания
+Нью-Йорка и имитация кирпичной стены в зоне телевизора. Подиум с закладной
+подсветкой и выдвижными ящиками для хранения вещей, на котором расположиться
+матрас, столешница объединенная с подоконником и стеллажи по бокам &nbsp;- главная особенность геометрии комнаты. И
+конечно же ее украшением является коллекция моделей автомобилей в навесном
+стеллаже.
+
+<span style="mso-bidi-font-family:Arial;color:black;
+background:white">Комната младшего сына уникальна своей планировкой. Визуально
+она разделена на 3 зоны: 1-я скрыта с первого взгляда. Столешница здесь не
+только повторяет изгибы стены, но и отвечает всем эргономичным требованиям. Она
+хорошо освещена, как в дневное время, за счет естественного света, так и в
+вечернее. 2-я - активная со шведской стенкой, 3-я - зона отдыха с комбинацией
+выдвижных ящиков. Замыкает композицию оригинальный стеллаж у окна.
+
+<span style="mso-bidi-font-family:Arial;color:black;
+background:white">Спальня - одна из главных комнат квартиры. Это пространство,
+где необходимо отдохнуть и восстановить силы после тяжелых будней. Упор в этой
+комнате сделан на легкость, воздушность и умиротворение. Паркетная доска
+придала помещению дух загородного дома, а подвесной туалетный стол и тумбы –
+легкость.
+
+<span style="mso-bidi-font-family:Arial;color:black;
+background:white">Лоджия оборудована барной стойкой и велотренажером. &nbsp;
+
+<span style="mso-bidi-font-family:Arial;color:black;
+background:white">Игра с пространством, динамика и в тоже время простота и
+лаконичность, четкие линии и функциональность. Вымеренные и выдержанные формы
+мягкой мебели и утонченные и изящные линии в кухонной мебели. Продуманные,
+интересные, нестандартные и в тоже время практичные решения всей квартиры,
+каждой комнаты, каждого узла, каждой детали. Вот что являться основой интерьера.<span style="font-size:10.5pt;line-height:115%;mso-bidi-font-family:Arial;color:black;
+background:white"></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+                                    <p class="project-block-info-table__row__right__desc__link">Показать полностью</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-block-info-table__row">
+                            <div class="project-block-info-table__row__left">
+                                <div class="project-block-info-table__row__left__ico">
+                                    <img src="img/table6.svg" alt="">
+                                </div>
+                                <p class="project-block-info-table__row__left__title">
+                                    Отзыв клиента:
+                                </p>
+                            </div>
+                            <div class="project-block-info-table__row__right">
+                                <div class="project-block-info-table__row__right__video">
+                                    <div class="project-block-info-table__row__right__video__preview">
+                                        <img src="img/preview.jpg" alt=""></div>
+                                    <div class="project-block-info-table__row__right__video__shadow" data-play="YwmVQA9ld2Y">
+                                        <img src="img/play.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+            <!-- Квартира 70м.кв-->
+            <div class="project-block">
+                <div class="project-block__gallery">
+
+                    <div class="slider-top-proj">
+                        <a href="img/70m/001 .jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/70m/001 .jpg"/>
+                        </a>
+                        <a href="img/70m/0012 .jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/70m/0012 .jpg"/>
+                        </a>
+                        <a href="img/70m/0013 .jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/70m/0013 .jpg"/>
+                        </a>
+                        <a href="img/70m/0014 .jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/70m/0014 .jpg"/>
+                        </a>
+                         <a href="img/70m/0015 .jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/70m/0015 .jpg"/>
+                        </a>
+                         <a href="img/70m/0016 .jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/70m/0016 .jpg"/>
+                        </a>
+                         <a href="img/70m/0018 .jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/70m/0018 .jpg"/>
+                        </a>
+                         <a href="img/70m/0019 .jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/70m/0019 .jpg"/>
+                        </a>
+                         <a href="img/70m/002 .jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/70m/002 .jpg"/>
+                        </a>
+                         <a href="img/70m/0021 .jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/70m/0021 .jpg"/>
+                        </a>
+                         <a href="img/70m/0022 .jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/70m/0022 .jpg"/>
+                        </a>
+                         <a href="img/70m/0023 .jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/70m/0023 .jpg"/>
+                        </a>
+                         <a href="img/70m/0024 .jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/70m/0024 .jpg"/>
+                        </a>
+                         <a href="img/70m/0027 .jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/70m/0027 .jpg"/>
+                        </a>
+                         <a href="img/70m/0029 .jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/70m/0029 .jpg"/>
+                        </a>
+                         <a href="img/70m/003 .jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/70m/003 .jpg"/>
+                        </a>
+                        <a href="img/70m/0030 .jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/70m/0030 .jpg"/>
+                        </a>
+                        <a href="img/70m/0032 .jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/70m/0032 .jpg"/>
+                        </a>
+                        <a href="img/70m/11011 .jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/70m/11011 .jpg"/>
+                        </a>
+
+                    </div>
+
+                    <div class="slider-nav-proj">
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/70m/001 .jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/70m/0012 .jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/70m/0013 .jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/70m/0014 .jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/70m/0015 .jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/70m/0016 .jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/70m/0018 .jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/70m/0019 .jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/70m/002 .jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/70m/0021 .jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/70m/0022 .jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/70m/0023 .jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/70m/0024 .jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/70m/0027 .jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/70m/0029 .jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/70m/003 .jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/70m/0030 .jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/70m/0032 .jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/70m/11011 .jpg"/>
+                       </div>
+
+                    </div>
+                </div>
+                <div class="project-block-info">
+                    <p class="project-block-info__title">Квартира 70 м.кв. Минск. Пр-т Машерова<span style="font-size:12.0pt;line-height:
+115%"></span></p>
+                    <div class="project-block-info-table">
+                        <div class="project-block-info-table__row">
+                            <div class="project-block-info-table__row__left">
+                                <div class="project-block-info-table__row__left__ico">
+                                    <img src="img/table1.svg" alt="">
+                                </div>
+                                <p class="project-block-info-table__row__left__title">
+                                    Тип жилья:
+                                </p>
+                            </div>
+                            <div class="project-block-info-table__row__right">
+                                <div class="project-block-info-table__row__right__desc"><p
+                                        class="project-block-info-table__row__right__desc__text">Новостройка</p></div>
+                            </div>
+                        </div>
+                        <div class="project-block-info-table__row">
+                            <div class="project-block-info-table__row__left">
+                                <div class="project-block-info-table__row__left__ico">
+                                    <img src="img/table2.svg" alt="">
+                                </div>
+                                <p class="project-block-info-table__row__left__title">
+                                    Площадь:
+                                </p>
+                            </div>
+                            <div class="project-block-info-table__row__right">
+                                <div class="project-block-info-table__row__right__desc"><p
+                                        class="project-block-info-table__row__right__desc__text">70 м<sup>2</sup></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-block-info-table__row">
+                            <div class="project-block-info-table__row__left">
+                                <div class="project-block-info-table__row__left__ico">
+                                    <img src="img/table3.svg" alt="">
+                                </div>
+                                <p class="project-block-info-table__row__left__title">
+                                    Срок выполнения:
+                                </p>
+                            </div>
+                            <div class="project-block-info-table__row__right">
+                                <div class="project-block-info-table__row__right__desc"><p
+                                        class="project-block-info-table__row__right__desc__text">36 рабочих дней</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-block-info-table__row">
+                            <div class="project-block-info-table__row__left">
+                                <div class="project-block-info-table__row__left__ico">
+                                    <img src="img/table4.svg" alt="">
+                                </div>
+                                <p class="project-block-info-table__row__left__title">
+                                    задача:
+                                </p>
+                            </div>
+                            <div class="project-block-info-table__row__right">
+                                <div class="project-block-info-table__row__right__desc"><p
+                                        class="project-block-info-table__row__right__desc__text">Стояла задача создать уютное пространство для временного проживания родственников или друзей хозяина квартиры. Современная классика – стиль который выбрал для себя заказчик.</p>
+                                    <div class="project-block-info-table__row__right__desc__link">
+                                        Показать полностью
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-block-info-table__row">
+                            <div class="project-block-info-table__row__left">
+                                <div class="project-block-info-table__row__left__ico">
+                                    <img src="img/table5.svg" alt="">
+                                </div>
+                                <p class="project-block-info-table__row__left__title">
+                                    Особенность
+                                    ремонта:
+                                </p>
+                            </div>
+                            <div class="project-block-info-table__row__right">
+                                <div class="project-block-info-table__row__right__desc"><p
+                                        class="project-block-info-table__row__right__desc__text">Так как дом панельный, значительных изменений при перепланировке мы не делали. Большую комнату отдали под спальню и организовали в ней вместительную гардеробную. В прихожей организован шкаф для одежды и полуоткрытая зона для быстрого доступа к верхней одеже и обуви. Прихожую от коридора разделяет темная плитка на полу, а объединяет пространство светлые обои в теплой гамме. Кухню частично объединили с гостиной, демонтировав незначительный участок стены. Проемы оставлены без дверей. В результате мы получили просторную общую зону, которая с прихожей хорошо просматривается создавая эффект присущий выбранному стилю. Разбавляет теплую гамму просторный балкон, стены и потолок которого выкрашены в белый цвет. Декоративные гипсовые элементы объединяют его с остальными помещениями. Целостный образ всей квартиры получился за счет контрастного декора в виде обоев на кухне и спальне, рисунок которых перекликается с узорами на подушках в гостиной. А также “вкрапления” в виде светильников и декоративных опор мебели.</p>
+                                    <p class="project-block-info-table__row__right__desc__link">Показать полностью</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-block-info-table__row">
+                            <div class="project-block-info-table__row__left">
+                                <div class="project-block-info-table__row__left__ico">
+                                    <img src="img/table6.svg" alt="">
+                                </div>
+                                <p class="project-block-info-table__row__left__title">
+                                    Отзыв клиента:
+                                </p>
+                            </div>
+                            <div class="project-block-info-table__row__right">
+                                <div class="project-block-info-table__row__right__video">
+                                    <div class="project-block-info-table__row__right__video__preview">
+                                        <img src="img/preview4.jpg" alt=""></div>
+                                    <div class="project-block-info-table__row__right__video__shadow" data-play="TfYn9Z923yM">
+                                        <img src="img/play.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+             <!-- Квартира 90 м.кв-->
+            <div class="project-block">
+                <div class="project-block__gallery">
+
+                    <div class="slider-top-proj">
+
+                        <a href="img/90m/a14.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/90m/a14.jpg"/>
+                        </a>
+                        <a href="img/90m/a15.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/90m/a15.jpg"/>
+                        </a>
+                        <a href="img/90m/a16.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/90m/a16.jpg"/>
+                        </a>
+                        <a href="img/90m/a2.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/90m/a2.jpg"/>
+                        </a>
+                        <a href="img/90m/a21.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/90m/a21.jpg"/>
+                        </a>
+                        <a href="img/90m/a22.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/90m/a22.jpg"/>
+                        </a>
+                        <a href="img/90m/a23.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/90m/a23.jpg"/>
+                        </a>
+                        <a href="img/90m/a24.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/90m/a24.jpg"/>
+                        </a>
+                        <a href="img/90m/a25.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/90m/a25.jpg"/>
+                        </a>
+                        <a href="img/90m/a26.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/90m/a26.jpg"/>
+                        </a>
+                        <a href="img/90m/a29.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/90m/a29.jpg"/>
+                        </a>
+                        <a href="img/90m/a30.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/90m/a30.jpg"/>
+                        </a>
+                        <a href="img/90m/a31.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/90m/a31.jpg"/>
+                        </a>
+                        <a href="img/90m/a33.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/90m/a33.jpg"/>
+                        </a>
+                         <a href="img/90m/a37.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/90m/a37.jpg"/>
+                        </a>
+                         <a href="img/90m/a38.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/90m/a38.jpg"/>
+                        </a>
+                         <a href="img/90m/a41.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/90m/a41.jpg"/>
+                        </a>
+                         <a href="img/90m/a43.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/90m/a43.jpg"/>
+                        </a>
+                         <a href="img/90m/a6.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/90m/a6.jpg"/>
+                        </a>
+                        <a href="img/90m/a8.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/90m/a8.jpg"/>
+                        </a>
+                        <a href="img/90m/a9.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/90m/a9.jpg"/>
+                        </a>
+
+                        <a href="img/90m/a1.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/90m/a1.jpg"/>
+                        </a>
+
+                    </div>
+
+                    <div class="slider-nav-proj">
+
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/90m/a14.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/90m/a15.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/90m/a16.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/90m/a2.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/90m/a21.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/90m/a22.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/90m/a23.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/90m/a24.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/90m/a25.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/90m/a26.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/90m/a29.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/90m/a30.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/90m/a31.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/90m/a33.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/90m/a37.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/90m/a38.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/90m/a41.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/90m/a43.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/90m/a6.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/90m/a8.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/90m/a9.jpg"/>
+                       </div>
+                        <div class="slider-nav-proj-item">
+                           <img data-lazy="img/90m/a1.jpg"/>
+                       </div>
+                    </div>
+                </div>
+                <div class="project-block-info">
+                    <p class="project-block-info__title">Квартира в ЖК Мегаполис для молодой семьи с двумя детьми</p>
+                    <div class="project-block-info-table">
+                        <div class="project-block-info-table__row">
+                            <div class="project-block-info-table__row__left">
+                                <div class="project-block-info-table__row__left__ico">
+                                    <img src="img/table1.svg" alt="">
+                                </div>
+                                <p class="project-block-info-table__row__left__title">
+                                    Тип жилья:
+                                </p>
+                            </div>
+                            <div class="project-block-info-table__row__right">
+                                <div class="project-block-info-table__row__right__desc"><p
+                                        class="project-block-info-table__row__right__desc__text">Новостройка</p></div>
+                            </div>
+                        </div>
+                        <div class="project-block-info-table__row">
+                            <div class="project-block-info-table__row__left">
+                                <div class="project-block-info-table__row__left__ico">
+                                    <img src="img/table2.svg" alt="">
+                                </div>
+                                <p class="project-block-info-table__row__left__title">
+                                    Площадь:
+                                </p>
+                            </div>
+                            <div class="project-block-info-table__row__right">
+                                <div class="project-block-info-table__row__right__desc"><p
+                                        class="project-block-info-table__row__right__desc__text">90 м<sup>2</sup></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-block-info-table__row">
+                            <div class="project-block-info-table__row__left">
+                                <div class="project-block-info-table__row__left__ico">
+                                    <img src="img/table3.svg" alt="">
+                                </div>
+                                <p class="project-block-info-table__row__left__title">
+                                    Срок выполнения:
+                                </p>
+                            </div>
+                            <div class="project-block-info-table__row__right">
+                                <div class="project-block-info-table__row__right__desc"><p
+                                        class="project-block-info-table__row__right__desc__text">30 рабочих дней</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-block-info-table__row">
+                            <div class="project-block-info-table__row__left">
+                                <div class="project-block-info-table__row__left__ico">
+                                    <img src="img/table4.svg" alt="">
+                                </div>
+                                <p class="project-block-info-table__row__left__title">
+                                    задача:
+                                </p>
+                            </div>
+                            <div class="project-block-info-table__row__right">
+                                <div class="project-block-info-table__row__right__desc"><p
+                                        class="project-block-info-table__row__right__desc__text">Создать светлый, уютный, современный интерьер с продуманными, интересными, нестандартными и практичными решениями, где открытое пространство важнее, чем наличие дополнительных зон хранения.</p>
+                                    <div class="project-block-info-table__row__right__desc__link">
+                                        Показать полностью
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-block-info-table__row">
+                            <div class="project-block-info-table__row__left">
+                                <div class="project-block-info-table__row__left__ico">
+                                    <img src="img/table5.svg" alt="">
+                                </div>
+                                <p class="project-block-info-table__row__left__title">
+                                    Особенность
+                                    ремонта:
+                                </p>
+                            </div>
+                            <div class="project-block-info-table__row__right">
+                                <div class="project-block-info-table__row__right__desc"><p
+                                        class="project-block-info-table__row__right__desc__text">Главный упор был на визуальное увеличение комнат за счет отделочных материалов. Так одной из первых идей было декорировать всю стену прихожей зеркальными панелями. Со стороны гостиной в них отражаются окна и раздвижные двери балкона, а также благородная отделка противоположной стены коридора.. Эффект получился замечательный. Коридор, который мы сузили за счет увеличения гостевого санузла, кажется широким. Следующим фокусом внимания была спальня. Хозяева квартиры поставили задачу визуально увеличить комнату. Первое решение – мы демонтировали часть стены под подоконником вместе с порожком и в последующем разместили сдвижную дверь. Благодаря этому света в помещении стало больше и пространство визуально расширилось. Следующим решением было увеличить площадь спальни за счет кухни, организовав на полученных, после демонтажных и монтажных работ, метрах гардеробную, что для многих хозяек квартир является мечтой. “Подарок” от застройщика - два окна в зоне кухни. Поэтому второе окно теперь принадлежит гардеробной. Кроме этого мы его увеличили, за счет чего получили больше естественного света. От спальни гардеробную разделяют стеклянные раздвижные двери в алюминиевом профиле. При включенном свете в вечернее время они создают интересную воздушную атмосферу. Малый санузел был расширен за счет коридора. Так мы получили возможность организовать полноценную душевую зону, а в небольшой нише разместился рукомойник. Дверь в малый санузел скрытого монтажа. Со стороны коридора как и стены она облицована шпоном на основе МДФ придавая эффект монолитности конструкции. Мягкий элемент сложной формы повторяет изгибы стены и подчеркивает индивидуальность планировочного решения. Авторский декоративный элемент с функцией мини-бара в гостиной украшает стену над камином. Различные скрытые с первого взгляда зоны хранения делают этот интерьер минималистичным, функциональным и эргономичным. Единственное помещение, решённое иначе это комната для девочек. Комплектуя комнату коллекцией мебели в стиле ар-деко, мы гармонично разбавили весь колорит квартиры, придерживаясь выбранного направления.</p>
+                                    <p class="project-block-info-table__row__right__desc__link">Показать полностью</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-block-info-table__row">
+                            <div class="project-block-info-table__row__left">
+                                <div class="project-block-info-table__row__left__ico">
+                                    <img src="img/table6.svg" alt="">
+                                </div>
+                                <p class="project-block-info-table__row__left__title">
+                                    Отзыв клиента:
+                                </p>
+                            </div>
+                            <div class="project-block-info-table__row__right">
+                                <div class="project-block-info-table__row__right__video">
+                                    <div class="project-block-info-table__row__right__video__preview">
+                                        <img src="img/preview2.jpg" alt=""></div>
+                                    <div class="project-block-info-table__row__right__video__shadow" data-play="MYmPVBgaBjk">
+                                        <img src="img/play.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Квартира 95м.кв-->
+            <div class="project-block">
+                <div class="project-block__gallery">
+
+                    <div class="slider-top-proj">
+                        <a href="img/95m/10t.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/95m/10t.jpg"/>
+                        </a>
+                         <a href="img/95m/11t.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/95m/11t.jpg"/>
+                        </a>
+                         <a href="img/95m/12t.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/95m/12t.jpg"/>
+                        </a>
+                         <a href="img/95m/13t.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/95m/13t.jpg"/>
+                        </a>
+                         <a href="img/95m/15t.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/95m/15t.jpg"/>
+                        </a>
+                         <a href="img/95m/16t.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/95m/16t.jpg"/>
+                        </a>
+                         <a href="img/95m/17t.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/95m/17t.jpg.jpg"/>
+                        </a>
+                         <a href="img/95m/18t.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/95m/18t.jpg"/>
+                        </a>
+                         <a href="img/95m/19t.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/95m/19t.jpg"/>
+                        </a>
+                         <a href="img/95m/1t.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/95m/1t.jpg"/>
+                        </a>
+                         <a href="img/95m/20t.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/95m/20t.jpg"/>
+                        </a>
+                         <a href="img/95m/21t.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/95m/21t.jpg"/>
+                        </a>
+                         <a href="img/95m/22t.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/70m/001 .jpg"/>
+                        </a>
+                         <a href="img/95m/10t.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/95m/22t.jpg"/>
+                        </a>
+                         <a href="img/95m/23t.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/70m/001 .jpg"/>
+                        </a>
+                         <a href="img/95m/10t.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/95m/23t.jpg"/>
+                        </a>
+                         <a href="img/95m/24t.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/70m/001 .jpg"/>
+                        </a>
+                         <a href="img/95m/10t.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/95m/24t.jpg"/>
+                        </a>
+                         <a href="img/95m/26t.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/95m/26t.jpg"/>
+                        </a>
+                         <a href="img/95m/27t.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/95m/27t.jpg"/>
+                        </a>
+                         <a href="img/95m/2t.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/95m/2t.jpg"/>
+                        </a>
+                         <a href="img/95m/3t.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/95m/3t.jpg"/>
+                        </a>
+                         <a href="img/95m/4t.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/95m/4t.jpg.jpg"/>
+                        </a>
+                         <a href="img/95m/5t.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/95m/5t.jpg"/>
+                        </a>
+
+
+                    </div>
+
+                    <div class="slider-nav-proj">
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/95m/10t.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/95m/11t.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/95m/12t.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/95m/13t.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/95m/15t.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/95m/16t.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/95m/17t.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/95m/18t.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/95m/19t.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/95m/20t.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/95m/21t.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/95m/22t.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/95m/23t.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/95m/24t.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/95m/26t.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/95m/27t.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/95m/2t.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/95m/3t.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/95m/4.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/95m/5t.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/95m/8t.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/95m/9t.jpg"/>
+                       </div>
+
+
+                    </div>
+                </div>
+                <div class="project-block-info">
+                    <p class="project-block-info__title">Квартира для семьи из 4-х человек с двумя разнополыми детьми подростками</p>
+                    <div class="project-block-info-table">
+                        <div class="project-block-info-table__row">
+                            <div class="project-block-info-table__row__left">
+                                <div class="project-block-info-table__row__left__ico">
+                                    <img src="img/table1.svg" alt="">
+                                </div>
+                                <p class="project-block-info-table__row__left__title">
+                                    Тип жилья:
+                                </p>
+                            </div>
+                            <div class="project-block-info-table__row__right">
+                                <div class="project-block-info-table__row__right__desc"><p
+                                        class="project-block-info-table__row__right__desc__text">Новостройка</p></div>
+                            </div>
+                        </div>
+                        <div class="project-block-info-table__row">
+                            <div class="project-block-info-table__row__left">
+                                <div class="project-block-info-table__row__left__ico">
+                                    <img src="img/table2.svg" alt="">
+                                </div>
+                                <p class="project-block-info-table__row__left__title">
+                                    Площадь:
+                                </p>
+                            </div>
+                            <div class="project-block-info-table__row__right">
+                                <div class="project-block-info-table__row__right__desc"><p
+                                        class="project-block-info-table__row__right__desc__text">95 м<sup>2</sup></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-block-info-table__row">
+                            <div class="project-block-info-table__row__left">
+                                <div class="project-block-info-table__row__left__ico">
+                                    <img src="img/table3.svg" alt="">
+                                </div>
+                                <p class="project-block-info-table__row__left__title">
+                                    Срок выполнения:
+                                </p>
+                            </div>
+                            <div class="project-block-info-table__row__right">
+                                <div class="project-block-info-table__row__right__desc"><p
+                                        class="project-block-info-table__row__right__desc__text">60 рабочих дней</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-block-info-table__row">
+                            <div class="project-block-info-table__row__left">
+                                <div class="project-block-info-table__row__left__ico">
+                                    <img src="img/table4.svg" alt="">
+                                </div>
+                                <p class="project-block-info-table__row__left__title">
+                                    задача:
+                                </p>
+                            </div>
+                            <div class="project-block-info-table__row__right">
+                                <div class="project-block-info-table__row__right__desc"><p
+                                        class="project-block-info-table__row__right__desc__text">Это нетипичный проект. Во-первых, стояла задача в кротчайшие сроки разработать полный дизайн-проект, включая 3D визуализацию, а также подобрать качественную и недорогую мебель, сантехнику, бытовую технику и отделочные материалы, которые должны были быть в наличии на складах в Минске, а на заказные позиции срок был не более 1 месяца. Во-вторых, на первом этапе проектирования было неудобство в проведении замеров в связи с тем, что в этой квартире еще жила другая семья и стояла крупногабаритная мебель. В-третьих, клиенты желали, чтобы каждая комната была выполнена в своем индивидуальном стиле и только незначительные детали могли объединять общее пространство. При этом предпочтение было в сторону белорусских производителей корпусной и встроенной мебели, а также IKEA. В-четвертых, ограниченный бюджет при значительных демонтажных и монтажных работ.</p>
+                                    <div class="project-block-info-table__row__right__desc__link">
+                                        Показать полностью
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-block-info-table__row">
+                            <div class="project-block-info-table__row__left">
+                                <div class="project-block-info-table__row__left__ico">
+                                    <img src="img/table5.svg" alt="">
+                                </div>
+                                <p class="project-block-info-table__row__left__title">
+                                    Особенность
+                                    ремонта:
+                                </p>
+                            </div>
+                            <div class="project-block-info-table__row__right">
+                                <div class="project-block-info-table__row__right__desc"><p
+                                        class="project-block-info-table__row__right__desc__text">Была увеличена ванная за счет коридора, благодаря чему удалось эргономично вписать мебель и сантехнику. Многие позиции были приобретены по акции. Отдельно стоящую технику, которую клиент приобретал на этапе подготовки проектной документации, получилось гармонично вписать в дизайн. Эстетическим центром всего проекта является декоративная перегородка, выполненная из деревянных реек от пола до потолка и интегрированные в нее полки для растений в верхней части, а в нижней закрытая зона хранения, которая одновременно эстетический и функциональный элемент интерьера, объединяющий коридор и кухню-гостиную. Футуристичный оттенок в спальне придают светильники и силуэты мебели, комната для сына решена в стиле лофт, для дочери скандинавский образ придает мебель из IKEA, в смешанном современном стилевом направлении общая зона и ванная, гостевой санузел с оттенками стиля лофт. Получилось функциональное и уютное пространство, в котором мы постарались реализовать идеи, построенные на основе предпочтений каждого члена семьи. Положительных результатов добились благодаря диалогу с клиентом, тщательной проработке проектных решений, оперативным согласованиям и выездным встречам.</p>
+                                    <p class="project-block-info-table__row__right__desc__link">Показать полностью</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+             <!-- Квартира fitnes -->
+            <div class="project-block">
+                <div class="project-block__gallery">
+
+                    <div class="slider-top-proj">
+                        <a href="img/fitnes/u1.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/fitnes/u1.jpg"/>
+                        </a>
+                        <a href="img/fitnes/u10.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/fitnes/u10.jpg"/>
+                        </a>
+                        <a href="img/fitnes/u11.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/fitnes/u11.jpg"/>
+                        </a>
+                        <a href="img/fitnes/u12.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/fitnes/u12.jpg"/>
+                        </a>
+                        <a href="img/fitnes/u14.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/fitnes/u14.jpg"/>
+                        </a>
+                        <a href="img/fitnes/u16.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/fitnes/u16.jpg"/>
+                        </a>
+                        <a href="img/fitnes/u17.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/fitnes/u17.jpg"/>
+                        </a>
+                        <a href="img/fitnes/u18.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/fitnes/u18.jpg"/>
+                        </a>
+                        <a href="img/fitnes/u2.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/fitnes/u2.jpg"/>
+                        </a>
+                        <a href="img/fitnes/u25.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/fitnes/u25.jpg"/>
+                        </a>
+                        <a href="img/fitnes/u27.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/fitnes/u27.jpg"/>
+                        </a>
+                        <a href="img/fitnes/u28.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/fitnes/u28.jpg"/>
+                        </a>
+                        <a href="img/fitnes/u3.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/fitnes/u3.jpg"/>
+                        </a>
+                        <a href="img/fitnes/u30.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/fitnes/u30.jpg"/>
+                        </a>
+                        <a href="img/fitnes/u31.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/fitnes/u31.jpg"/>
+                        </a>
+                        <a href="img/fitnes/u32.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/fitnes/u32.jpg"/>
+                        </a>
+                        <a href="img/fitnes/u35.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/fitnes/u35.jpg"/>
+                        </a>
+                        <a href="img/fitnes/u36.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/fitnes/u36.jpg"/>
+                        </a>
+                         <a href="img/fitnes/u37.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/fitnes/u37.jpg"/>
+                        </a>
+                         <a href="img/fitnes/u5.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/fitnes/u5.jpg"/>
+                        </a>
+                         <a href="img/fitnes/u7.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/fitnes/u7.jpg"/>
+                        </a>
+                         <a href="img/fitnes/u8.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/fitnes/u8.jpg"/>
+                        </a>
+                         <a href="img/fitnes/u9.jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/fitnes/u9.jpg"/>
+                        </a>
+
+
+                    </div>
+
+                    <div class="slider-nav-proj">
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/fitnes/u1.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/fitnes/u10.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/fitnes/u11.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/fitnes/u12.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/fitnes/u14.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/fitnes/u16.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/fitnes/u17.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/fitnes/u18.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/fitnes/u2.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/fitnes/u25.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/fitnes/u27.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/fitnes/u28.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/fitnes/u3.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/fitnes/u30.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/fitnes/u31.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/fitnes/u31.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/fitnes/u32.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/fitnes/u35.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/fitnes/u36.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/fitnes/u37.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/fitnes/u5.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/fitnes/u7.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/fitnes/u8.jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/fitnes/u9.jpg"/>
+                       </div>
+
+
+
+                    </div>
+                </div>
+                <div class="project-block-info">
+                    <p class="project-block-info__title">Фитнес-клуб. Минск. Пр-т Победителей</p>
+                    <div class="project-block-info-table">
+                        <div class="project-block-info-table__row">
+                            <div class="project-block-info-table__row__left">
+                                <div class="project-block-info-table__row__left__ico">
+                                    <img src="img/table1.svg" alt="">
+                                </div>
+                                <p class="project-block-info-table__row__left__title">
+                                    Тип жилья:
+                                </p>
+                            </div>
+                            <div class="project-block-info-table__row__right">
+                                <div class="project-block-info-table__row__right__desc"><p
+                                        class="project-block-info-table__row__right__desc__text">Новостройка</p></div>
+                            </div>
+                        </div>
+                        <div class="project-block-info-table__row">
+                            <div class="project-block-info-table__row__left">
+                                <div class="project-block-info-table__row__left__ico">
+                                    <img src="img/table2.svg" alt="">
+                                </div>
+                                <p class="project-block-info-table__row__left__title">
+                                    Площадь:
+                                </p>
+                            </div>
+                            <div class="project-block-info-table__row__right">
+                                <div class="project-block-info-table__row__right__desc"><p
+                                        class="project-block-info-table__row__right__desc__text">3274,82 м<sup>2</sup></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-block-info-table__row">
+                            <div class="project-block-info-table__row__left">
+                                <div class="project-block-info-table__row__left__ico">
+                                    <img src="img/table3.svg" alt="">
+                                </div>
+                                <p class="project-block-info-table__row__left__title">
+                                    Срок выполнения:
+                                </p>
+                            </div>
+                            <div class="project-block-info-table__row__right">
+                                <div class="project-block-info-table__row__right__desc"><p
+                                        class="project-block-info-table__row__right__desc__text">80 рабочих дней</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-block-info-table__row">
+                            <div class="project-block-info-table__row__left">
+                                <div class="project-block-info-table__row__left__ico">
+                                    <img src="img/table4.svg" alt="">
+                                </div>
+                                <p class="project-block-info-table__row__left__title">
+                                    задача:
+                                </p>
+                            </div>
+                            <div class="project-block-info-table__row__right">
+                                <div class="project-block-info-table__row__right__desc"><p
+                                        class="project-block-info-table__row__right__desc__text">При первом же знакомстве с помещением был выявлен его значительный недостаток - это невысокие потолки, а коробов вентиляции еще не было. Точкой опоры служил всеми любимый и давно популярный стиль лофт.</p>
+                                    <div class="project-block-info-table__row__right__desc__link">
+                                        Показать полностью
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-block-info-table__row">
+                            <div class="project-block-info-table__row__left">
+                                <div class="project-block-info-table__row__left__ico">
+                                    <img src="img/table5.svg" alt="">
+                                </div>
+                                <p class="project-block-info-table__row__left__title">
+                                    Особенность
+                                    ремонта:
+                                </p>
+                            </div>
+                            <div class="project-block-info-table__row__right">
+                                <div class="project-block-info-table__row__right__desc"><p
+                                        class="project-block-info-table__row__right__desc__text">Черный цвет для потолков - довольно рискованное решение при высоте 2.6м и к тому же многие эксперты считают это ошибкой дизайнера. Но в нашем случае это стало выходом из ситуации. Расширяют пространство светлый пол и зеркала. Вытягивают его по высоте вертикально расположенная плитка под текстуру дерева, которой облицованы стены в зоне ресепшн, а также колонны выкрашенные в черный цвет и каркасные стеллажи. Зал с силовым оборудованием преимущественно в темной гамме, за исключением некоторых станков, которые я предложил сделать белыми, чтобы еще больше подчеркнуть этот упорядоченный хаос. Самым светлым и одним из самых любимых помещений оказался зал аэробики, стены которого оклеены зеркалами, а потолок и короба вентиляции окрашены белой краской. Холл оборудован стеклянным тамбуром на алюминиевом каркасе черного цвета. Мягкая зона строгих геометрических форм сделана под заказ на металлическом каркасе, которую дополняют стеллажи. Раздевалки и душевые лаконичны и просты по исполнению. Делают их уютными скамейки из массива дуба на металлическом каркасе. Стены душевых и пол облицован керамогранитом под текстуру бетона с теплым серым оттенком. Стекло, камень, дерево и металл - основные материалы которые были использованы в данном проекте. Они помогли создать нужную атмосферу.</p>
+                                    <p class="project-block-info-table__row__right__desc__link">Показать полностью</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Дом. IT комплекс -->
+
+             <div class="project-block">
+                <div class="project-block__gallery">
+
+                    <div class="slider-top-proj">
+                        <a href="img/itdom/e2 .jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/itdom/e2 .jpg"/>
+                        </a>
+                        <a href="img/itdom/e3 .jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/itdom/e3 .jpg"/>
+                        </a>
+                        <a href="img/itdom/e4 .jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/itdom/e4 .jpg"/>
+                        </a>
+                        <a href="img/itdom/e5 .jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/itdom/e5 .jpg"/>
+                        </a>
+
+                        <a href="img/itdom/e7 .jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/itdom/e7 .jpg"/>
+                        </a>
+                        <a href="img/itdom/e8 .jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/itdom/e8 .jpg"/>
+                        </a>
+                        <a href="img/itdom/e9 .jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/itdom/e9 .jpg"/>
+                        </a>
+                        <a href="img/itdom/e10 .jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/itdom/e10 .jpg"/>
+                        </a>
+                        <a href="img/itdom/q1 .jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/itdom/q1 .jpg"/>
+                        </a>
+                        <a href="img/itdom/q2 .jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/itdom/q2 .jpg"/>
+                        </a>
+                        <a href="img/itdom/q4 .jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/itdom/q4 .jpg"/>
+                        </a>
+                        <a href="img/itdom/q6 .jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/itdom/q6 .jpg"/>
+                        </a>
+                        <a href="img/itdom/r1 .jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/itdom/r1 .jpg"/>
+                        </a>
+                        <a href="img/itdom/r2 .jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/itdom/r2 .jpg"/>
+                        </a>
+                        <a href="img/itdom/r5 .jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/itdom/r5 .jpg"/>
+                        </a>
+                        <a href="img/itdom/w1 .jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/itdom/w1 .jpg"/>
+                        </a>
+                        <a href="img/itdom/w2 .jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/itdom/w2 .jpg"/>
+                        </a>
+                        <a href="img/itdom/w4 .jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/itdom/w2 .jpg"/>
+                        </a>
+                        <a href="img/itdom/w7 .jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/itdom/w7 .jpg"/>
+                        </a>
+                        <a href="img/itdom/w8 .jpg" class="slider-top-proj-item item-fancy">
+                            <img data-lazy="img/itdom/w8 .jpg"/>
+                        </a>
+
+                    </div>
+
+                    <div class="slider-nav-proj">
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/itdom/e2 .jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/itdom/e3 .jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/itdom/e4 .jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/itdom/e5 .jpg"/>
+                       </div>
+
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/itdom/e7 .jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/itdom/e8 .jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/itdom/e9 .jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/itdom/e10 .jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/itdom/q1 .jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/itdom/q2 .jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/itdom/q4 .jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/itdom/q6 .jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/itdom/r1 .jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/itdom/r2 .jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/itdom/r5 .jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/itdom/w1 .jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/itdom/w2 .jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/itdom/w4 .jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/itdom/w7 .jpg"/>
+                       </div>
+                       <div class="slider-nav-proj-item">
+                           <img data-lazy="img/itdom/w8 .jpg"/>
+                       </div>
+                    </div>
+                </div>
+                <div class="project-block-info">
+                    <p class="project-block-info__title">Дом в IT комплексе для молодой семьи с двумя детьми.</p>
+                    <div class="project-block-info-table">
+                        <div class="project-block-info-table__row">
+                            <div class="project-block-info-table__row__left">
+                                <div class="project-block-info-table__row__left__ico">
+                                    <img src="img/table1.svg" alt="">
+                                </div>
+                                <p class="project-block-info-table__row__left__title">
+                                    Тип жилья:
+                                </p>
+                            </div>
+                            <div class="project-block-info-table__row__right">
+                                <div class="project-block-info-table__row__right__desc"><p
+                                        class="project-block-info-table__row__right__desc__text">Новостройка</p></div>
+                            </div>
+                        </div>
+                        <div class="project-block-info-table__row">
+                            <div class="project-block-info-table__row__left">
+                                <div class="project-block-info-table__row__left__ico">
+                                    <img src="img/table2.svg" alt="">
+                                </div>
+                                <p class="project-block-info-table__row__left__title">
+                                    Площадь:
+                                </p>
+                            </div>
+                            <div class="project-block-info-table__row__right">
+                                <div class="project-block-info-table__row__right__desc"><p
+                                        class="project-block-info-table__row__right__desc__text">92,8 м<sup>2</sup></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-block-info-table__row">
+                            <div class="project-block-info-table__row__left">
+                                <div class="project-block-info-table__row__left__ico">
+                                    <img src="img/table3.svg" alt="">
+                                </div>
+                                <p class="project-block-info-table__row__left__title">
+                                    Срок выполнения:
+                                </p>
+                            </div>
+                            <div class="project-block-info-table__row__right">
+                                <div class="project-block-info-table__row__right__desc"><p
+                                        class="project-block-info-table__row__right__desc__text">30 рабочих дней</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-block-info-table__row">
+                            <div class="project-block-info-table__row__left">
+                                <div class="project-block-info-table__row__left__ico">
+                                    <img src="img/table4.svg" alt="">
+                                </div>
+                                <p class="project-block-info-table__row__left__title">
+                                    задача:
+                                </p>
+                            </div>
+                            <div class="project-block-info-table__row__right">
+                                <div class="project-block-info-table__row__right__desc"><p
+                                        class="project-block-info-table__row__right__desc__text">Клиенты обратились, когда уже
+шло строительство дома, но пока был готов только фундамент.​&nbsp;
+<span lang="EN-US" style="mso-bidi-font-family:Arial;color:black;
+mso-ansi-language:EN-US">C<span style="mso-bidi-font-family:Arial;
+color:black">тояла задача создать проект с нотами скандинавского стиля на
+основе стандартного проекта от застройщика.
+В кротчайшие сроки необходимо было решать где и какого размера будут окна без
+существенных изменений базового плана.</span></span></p>
+                                    <div class="project-block-info-table__row__right__desc__link">
+                                        Показать полностью
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-block-info-table__row">
+                            <div class="project-block-info-table__row__left">
+                                <div class="project-block-info-table__row__left__ico">
+                                    <img src="img/table5.svg" alt="">
+                                </div>
+                                <p class="project-block-info-table__row__left__title">
+                                    Особенность
+                                    ремонта:
+                                </p>
+                            </div>
+                            <div class="project-block-info-table__row__right">
+                                <div class="project-block-info-table__row__right__desc"><p
+                                        class="project-block-info-table__row__right__desc__text">На первом этаже была организована кухня-гостиная. Предложение, сделать дополнительное окно в стене у обеденной зоны, клиентами было сразу одобрено. Таким образом добавили больше​ естественного ​ света, который распространился и на гостиную.
+Установлен газовый котел в зоне готовки.
+В гостиной нашли место для камина, для этого был организован дымоход.<br><br>
+Пол на первом этаже с водяным обогревом облицован керамогранитом под текстуру дерева.
+Пространство под лестницей мы закрыли, обеспечив комнату для котла и стиральной машины.<br><br>
+На втором этаже нам удалось сделать три комнаты, обеспечив одну из стен дополнительным окном. Одну комнату отдали для хозяйской спальни, две другие - детская с двухярусной кроватью и игровая, которая за счет большой сдвижной двери трансформируется в гостевую.
+Ванную мы также снабдили естественным светом, разместив небольшое окно, которое как и другие только подчеркнули фасад дома.<br><br>
+Так как в семье 2 активных мальчика стены первого этажа включая лестничный холл покрыты моющейся краской.<br><br>
+Стены второго этажа оклеены обоями.<br><br>
+Так как помещения получились небольшими мною было предложено отказаться от полноценного чердака. Поэтому высота потолка в самой высокой точке получилась 3.5м. Со стороны строителей и знакомых заказчика эта идея подвергалась критике, но в итоге все оказались довольны.&nbsp; Благодаря этому в помещениях достаточно свежего воздуха и света. К тому же визуально комнаты не кажутся сжатыми. И при этом нет значительных теплопотерь. Потолки на 2-м этаже обшиты вагонкой и покрашены в белый цвет.&nbsp;&nbsp;
+На этапе подготовки дизайн-проекта интерьера я подключил архитектора, который создал новый внешний облик дома, организовав входную группу, крытый гараж, открытую террасу на заднем дворе, отдельный хоз. блок и оригинально решен ландшафт.
+Даже при ограниченном бюджете удалось создать уютное гнездышко.
+</p>
+                                    <p class="project-block-info-table__row__right__desc__link">Показать полностью</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- <div class="project-block">
                 <div class="project-block__gallery">
                     <div class="fotorama"
 
@@ -1378,134 +2967,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="project-block">
-                <div class="project-block__gallery">
-                    <div class="fotorama"
-
-                         data-nav="thumbs">
-                        <a href="img/project1_1.jpg"><img src="img/project1_1_thumb.jpg" alt=""></a>
-                        <a href="img/project1_1.jpg"><img src="img/project1_1_thumb.jpg" alt=""></a>
-                        <a href="img/project1_1.jpg"><img src="img/project1_1_thumb.jpg" alt=""></a>
-                        <a href="img/project1_1.jpg"><img src="img/project1_1_thumb.jpg" alt=""></a>
-                        <a href="img/project1_1.jpg"><img src="img/project1_1_thumb.jpg" alt=""></a>
-                        <a href="img/project1_1.jpg"><img src="img/project1_1_thumb.jpg" alt=""></a>
-
-                    </div>
-                </div>
-                <div class="project-block-info">
-                    <p class="project-block-info__title">Ремонтно-отделочные работыпод ключ по
-                        ул. Маяковского 12 Минск</p>
-                    <div class="project-block-info-table">
-                        <div class="project-block-info-table__row">
-                            <div class="project-block-info-table__row__left">
-                                <div class="project-block-info-table__row__left__ico">
-                                    <img src="img/table1.svg" alt="">
-                                </div>
-                                <p class="project-block-info-table__row__left__title">
-                                    Тип жилья:
-                                </p>
-                            </div>
-                            <div class="project-block-info-table__row__right">
-                                <div class="project-block-info-table__row__right__desc"><p
-                                        class="project-block-info-table__row__right__desc__text">Новостройка</p></div>
-                            </div>
-                        </div>
-                        <div class="project-block-info-table__row">
-                            <div class="project-block-info-table__row__left">
-                                <div class="project-block-info-table__row__left__ico">
-                                    <img src="img/table2.svg" alt="">
-                                </div>
-                                <p class="project-block-info-table__row__left__title">
-                                    Площадь:
-                                </p>
-                            </div>
-                            <div class="project-block-info-table__row__right">
-                                <div class="project-block-info-table__row__right__desc"><p
-                                        class="project-block-info-table__row__right__desc__text">125 м<sup>2</sup></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-block-info-table__row">
-                            <div class="project-block-info-table__row__left">
-                                <div class="project-block-info-table__row__left__ico">
-                                    <img src="img/table3.svg" alt="">
-                                </div>
-                                <p class="project-block-info-table__row__left__title">
-                                    Срок выполнения:
-                                </p>
-                            </div>
-                            <div class="project-block-info-table__row__right">
-                                <div class="project-block-info-table__row__right__desc"><p
-                                        class="project-block-info-table__row__right__desc__text">30 рабочих дней</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-block-info-table__row">
-                            <div class="project-block-info-table__row__left">
-                                <div class="project-block-info-table__row__left__ico">
-                                    <img src="img/table4.svg" alt="">
-                                </div>
-                                <p class="project-block-info-table__row__left__title">
-                                    задача:
-                                </p>
-                            </div>
-                            <div class="project-block-info-table__row__right">
-                                <div class="project-block-info-table__row__right__desc"><p
-                                        class="project-block-info-table__row__right__desc__text">Lorem ipsum dolor sit
-                                    amet,
-                                    consectetur adipisicing elit, sed eiusmod tempor incididunt ut labore et dolore
-                                    magna
-                                    aliqua.</p>
-                                    <div class="project-block-info-table__row__right__desc__link">
-                                        Показать полностью
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-block-info-table__row">
-                            <div class="project-block-info-table__row__left">
-                                <div class="project-block-info-table__row__left__ico">
-                                    <img src="img/table5.svg" alt="">
-                                </div>
-                                <p class="project-block-info-table__row__left__title">
-                                    Особенность
-                                    ремонта:
-                                </p>
-                            </div>
-                            <div class="project-block-info-table__row__right">
-                                <div class="project-block-info-table__row__right__desc"><p
-                                        class="project-block-info-table__row__right__desc__text">Lorem ipsum dolor sit
-                                    amet,
-                                    consectetur adipisicing elit, sed eiusmod tempor incididunt ut labore et dolore
-                                    magna
-                                    aliqua.</p>
-                                    <p class="project-block-info-table__row__right__desc__link">Показать полностью</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-block-info-table__row">
-                            <div class="project-block-info-table__row__left">
-                                <div class="project-block-info-table__row__left__ico">
-                                    <img src="img/table6.svg" alt="">
-                                </div>
-                                <p class="project-block-info-table__row__left__title">
-                                    Отзыв клиента:
-                                </p>
-                            </div>
-                            <div class="project-block-info-table__row__right">
-                                <div class="project-block-info-table__row__right__video">
-                                    <div class="project-block-info-table__row__right__video__preview">
-                                        <img src="img/preview.jpg" alt=""></div>
-                                    <div class="project-block-info-table__row__right__video__shadow">
-                                        <img src="img/play.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </div> -->
         </div>
         <div class="project-nav">
             <span class="project-nav__arrow project-nav__arrow--left icon-arrow_left"></span>
@@ -1524,9 +2986,8 @@
 <section class="seventh-screen">
     <div class="container">
         <h2 class="section-title section-title--white">
-            Средняя стоимость ремонта новостройки 65 руб/м<sup>2</sup>
-            <span class="section-title__desc">Знаем рынок и предлагаем доступные цены для Миснка и области — от 65
-                руб/м2</span>
+            Средняя стоимость ремонта новостройки от 120$ м<sup>2</sup>
+            <span class="section-title__desc">Знаем рынок и предлагаем доступные цены для Минска и области — от 120$ м<sup>2</sup> за ремонт квартиры</span>
         </h2>
         <div class="scroll-block">
             <div class="scroll-block-left">
@@ -1538,24 +2999,21 @@
             </div>
             <div class="scroll-block-right">
                 <p class="scroll-block-right__title">
-                    У нас честные цены и смета
-                </p>
+                    Цена указана в $ ориентировочно, расчет производится в белорусских рублях</p>
                 <div id="overflow" class="scroll-block-right__items">
                     <div class="scroll-block-right__items__inner">
                         <div class="scroll-block-right__items__inner__item"
                              style="background: url(img/scroll1.jpg)center center no-repeat">
                             <div class="scroll-block-right__items__inner__item__content">
                                 <p class="scroll-block-right__items__inner__item__content__title">
-                                    Квартиры
+                                    Ремонт вторичного жилья
                                 </p>
                                 <p class="scroll-block-right__items__inner__item__content__price">
-                                    от 65 руб.м<sup>2</sup>
+                                    от 180$ м<sup>2</sup>
                                 </p>
                                 <p class="scroll-block-right__items__inner__item__content__desc">
-                                    Дизайнерский ремонт "под ключ"с
-                                    фиксированной стоимостью и сроками.
-                                </p>
-                                <p class="scroll-block-right__items__inner__item__content__button">ПОЛУЧИТЬ СМЕТУ
+                                    Прощайте «бабушкины ковры» и другие «бонусы» от предыдущих жильцов                                </p>
+                                <p class="scroll-block-right__items__inner__item__content__button consult">ПОЛУЧИТЬ СМЕТУ
                                     БЕСПЛАТНО</p>
                             </div>
                         </div>
@@ -1563,16 +3021,14 @@
                              style="background: url(img/scroll2.jpg)center center no-repeat">
                             <div class="scroll-block-right__items__inner__item__content">
                                 <p class="scroll-block-right__items__inner__item__content__title">
-                                    Квартиры
+                                    Ремонт в новостройке
                                 </p>
                                 <p class="scroll-block-right__items__inner__item__content__price">
-                                    от 65 руб.м<sup>2</sup>
+                                     от 120$ м<sup>2</sup>
                                 </p>
                                 <p class="scroll-block-right__items__inner__item__content__desc">
-                                    Дизайнерский ремонт "под ключ"с
-                                    фиксированной стоимостью и сроками.
-                                </p>
-                                <p class="scroll-block-right__items__inner__item__content__button">ПОЛУЧИТЬ СМЕТУ
+                                    «Оденем» голые стены во что захотите                                </p>
+                                <p class="scroll-block-right__items__inner__item__content__button consult">ПОЛУЧИТЬ СМЕТУ
                                     БЕСПЛАТНО</p>
                             </div>
                         </div>
@@ -1580,16 +3036,14 @@
                              style="background: url(img/scroll1.jpg)center center no-repeat">
                             <div class="scroll-block-right__items__inner__item__content">
                                 <p class="scroll-block-right__items__inner__item__content__title">
-                                    Квартиры
+                                    Ремонт пентхауса
                                 </p>
                                 <p class="scroll-block-right__items__inner__item__content__price">
-                                    от 65 руб.м<sup>2</sup>
+                                    от 120$ м<sup>2</sup>
                                 </p>
                                 <p class="scroll-block-right__items__inner__item__content__desc">
-                                    Дизайнерский ремонт "под ключ"с
-                                    фиксированной стоимостью и сроками.
-                                </p>
-                                <p class="scroll-block-right__items__inner__item__content__button">ПОЛУЧИТЬ СМЕТУ
+                                    Сделаем так, что вам не захочется выходить на крышу                                </p>
+                                <p class="scroll-block-right__items__inner__item__content__button consult">ПОЛУЧИТЬ СМЕТУ
                                     БЕСПЛАТНО</p>
                             </div>
                         </div>
@@ -1597,16 +3051,14 @@
                              style="background: url(img/scroll2.jpg)center center no-repeat">
                             <div class="scroll-block-right__items__inner__item__content">
                                 <p class="scroll-block-right__items__inner__item__content__title">
-                                    Квартиры
+                                    Ремонт домов и коттеджей
                                 </p>
                                 <p class="scroll-block-right__items__inner__item__content__price">
-                                    от 65 руб.м<sup>2</sup>
+                                    от 180$ м<sup>2</sup>
                                 </p>
                                 <p class="scroll-block-right__items__inner__item__content__desc">
-                                    Дизайнерский ремонт "под ключ"с
-                                    фиксированной стоимостью и сроками.
-                                </p>
-                                <p class="scroll-block-right__items__inner__item__content__button">ПОЛУЧИТЬ СМЕТУ
+                                    Работаем одинаково хорошо на всех уровнях и этажах                                </p>
+                                <p class="scroll-block-right__items__inner__item__content__button consult">ПОЛУЧИТЬ СМЕТУ
                                     БЕСПЛАТНО</p>
                             </div>
                         </div>
@@ -1614,16 +3066,14 @@
                              style="background: url(img/scroll1.jpg)center center no-repeat">
                             <div class="scroll-block-right__items__inner__item__content">
                                 <p class="scroll-block-right__items__inner__item__content__title">
-                                    Квартиры
+                                    Ремонт коммерческой недвижимости
                                 </p>
                                 <p class="scroll-block-right__items__inner__item__content__price">
-                                    от 65 руб.м<sup>2</sup>
+                                    от 60$ м<sup>2</sup>
                                 </p>
                                 <p class="scroll-block-right__items__inner__item__content__desc">
-                                    Дизайнерский ремонт "под ключ"с
-                                    фиксированной стоимостью и сроками.
-                                </p>
-                                <p class="scroll-block-right__items__inner__item__content__button">ПОЛУЧИТЬ СМЕТУ
+                                    Дружим с дедлайнами: блюдём сроки при любых объёмах работ                                </p>
+                                <p class="scroll-block-right__items__inner__item__content__button consult">ПОЛУЧИТЬ СМЕТУ
                                     БЕСПЛАТНО</p>
                             </div>
                         </div>
@@ -1631,16 +3081,14 @@
                              style="background: url(img/scroll2.jpg)center center no-repeat">
                             <div class="scroll-block-right__items__inner__item__content">
                                 <p class="scroll-block-right__items__inner__item__content__title">
-                                    Квартиры
+                                    Ремонт офисов
                                 </p>
                                 <p class="scroll-block-right__items__inner__item__content__price">
-                                    от 65 руб.м<sup>2</sup>
+                                    от 60$ м<sup>2</sup>
                                 </p>
                                 <p class="scroll-block-right__items__inner__item__content__desc">
-                                    Дизайнерский ремонт "под ключ"с
-                                    фиксированной стоимостью и сроками.
-                                </p>
-                                <p class="scroll-block-right__items__inner__item__content__button">ПОЛУЧИТЬ СМЕТУ
+                                    Справимся с ремонтом за&nbsp;выходные&nbsp;– никаких отгулов за свой счёт                                </p>
+                                <p class="scroll-block-right__items__inner__item__content__button consult">ПОЛУЧИТЬ СМЕТУ
                                     БЕСПЛАТНО</p>
                             </div>
                         </div>
@@ -1653,9 +3101,9 @@
                     </div>
                 </div>
                 <div class="scroll-block-right-button">
-                    <p class="scroll-block-right-button__title">Обновлено: 24 марта</p>
+                    <p class="scroll-block-right-button__title date-num">Обновлено: 24 марта</p>
                     <div class="scroll-block-right-button__item">
-                        <button class="btn">СКАЧАТЬ ПРАЙС НА РЕМОНТ</button>
+                        <button class="btn btn-down">СКАЧАТЬ ПРАЙС НА РЕМОНТ</button>
                     </div>
                     <p class="scroll-block-right-button__size">PDF 1.6 MB</p>
                 </div>
@@ -1663,44 +3111,42 @@
         </div>
         <div class="seventh-screen__mockup">
             <div class="scroll-block-left__mockup__img">
-                <img src="img/price_big2.png" alt=""></div>
+                <div class="parallax-scene" id="scene-2">
+                    <img src="img/price_big2.png" alt="" data-depth="0.8">
+                </div>
+            </div>
         </div>
     </div>
 </section>
 <section class="eight-screen grey">
     <div class="container">
         <h2 class="section-title section-title--black">
-            Мы сэкономим Вам  до 30% бюджета и от 6
+            Мы сэкономим Вам&nbsp; до 30% бюджета и от 6
             месяцев ремонта разработав Дизайн-проект
         </h2>
         <div class="offer-block">
             <div class="offer-block-left">
                 <div class="offer-block-left-inner">
                     <div class="offer-block-left-inner__text">
-                        <p class="offer-block-left-inner__text__title">Существует МИФ...</p>
-                        <p class="offer-block-left-inner__text__content">...что дизайн-проект orem ipsum dolor sit amet,
-                            consectetur
-                            adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                            ad
-                            minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat.
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                            mollit
-                            anim id est.</p>
+                        <p class="offer-block-left-inner__text__title">Существует миф, что дизайн-проект &nbsp;- пустая трата времени. <br>Грубейшее заблуждение!</p>
+                        <p class="offer-block-left-inner__text__content">Дизайн-проект — это не просто красивая картинка будущего помещения (хотя она тоже там есть). Это полноценный документ, в котором содержится абсолютно вся информация о ремонте вашего помещения, начиная от замеров дверного проёма, заканчивая цветом фурнитуры мебели.<br><br>В дизайн-проекте содержатся детальные расчёты абсолютно каждого направления работ:<br>•&nbsp;&nbsp;&nbsp;&nbsp;проектирование;<br>•&nbsp;&nbsp;&nbsp;&nbsp;составление чертежей;<br>•&nbsp;&nbsp;&nbsp;&nbsp;оценка стоимость строительных работ;<br>•&nbsp;&nbsp;&nbsp;&nbsp;необходимое количество строительных материалов, их стоимость и т.д. <br><br>Визуализация дизайна помещения – отдельный момент, который подробно оговаривается с заказчиком. При этом вы можете вносить правки и озвучивать свои пожелания. Дальнейшие расчёты будут происходить непосредственно после окончательного утверждения.&nbsp;<br><br>Только после вашего согласия будет представлена так сказать «изнаночная сторона» ремонта. Такая подробная «инструкция» позволит работникам максимально точно выполнить поставленную задачу. И только так на выходе вы получите тот дизайн помещения, который на который согласились.</p>
                     </div>
                     <div class="offer-block-left-inner-download">
                         <p class="offer-block-left-inner-download__title">Загрузите предложение по дизайн-проекту</p>
-                        <form class="offer-block-left-inner-download__row">
-                            <div class="quiz_tel_wrap"><span class="icon-Phones"></span>
-                                <input class="quiz_tel" type="tel" id="tel3" placeholder="+375 (**) *** ** **"
-                                       tabindex="0">
+                        <div class="mob-show">
+                            <a class="offer-block-left-inner-download__look not-anim" href="#">Смотреть примеры дизайн
+                            проектов</a>
+                        </div>
+                        <form class="offer-block-left-inner-download__row" onsubmit="yaCounter49321939.reachGoal('primer')">
+                            <input type="hidden" name="formname" value="predlojenie">
+                            <div class="main-input"><span class="icon-Phones"></span>
+                                <input class="main-input__inner" type="tel" id="tel3" placeholder="+375 (**) *** ** **" name="yourPhone" required>
                             </div>
                             <div class="offer-block-left-inner-download__row__button">
                                 <button type="submit" class="btn">ЗАГРУЗИТЬ ПРЕДЛОЖЕНИЕ</button>
                             </div>
                         </form>
-                        <a class="offer-block-left-inner-download__look" href="#">Смотреть примеры дизайн
+                        <a class="offer-block-left-inner-download__look mob-hide" href="#">Смотреть примеры дизайн
                             проектов</a>
                     </div>
                 </div>
@@ -1709,16 +3155,96 @@
                 <img src="img/peoples.png" alt="">
                 <div class="guy guy--tatiyana">
                     <p class="guy__name">Татьяна Новик</p>
-                    <p class="guy__work">Дизайнер компании ГУРУ-СТРОЙ</p>
+                    <p class="guy__work">Опыт с 2005 года. <br>Подстраиваюсь под Ваш бюджет, <br>работаю со 100% гарантией красоты.</p>
                 </div>
                 <div class="guy guy--denis">
                     <p class="guy__name">Денис Кутышенко</p>
-                    <p class="guy__work">Дизайнер компании ГУРУ-СТРОЙ</p>
+                    <p class="guy__work">Закончил Академию искусств <br>по специальности дизайн интерьеров в 2009г.<br>В области дизайна интерьеров с 2006 г</p>
                 </div>
             </div>
         </div>
     </div>
 
+</section>
+<section class="nineth-screen">
+    <div class="container">
+        <h2 class="section-title section-title--black">
+            Бесплатно сделаем замер и рассчитаем
+            смету в день Вашего обращения
+        </h2>
+        <div class="free-calc">
+            <form class="froze" onsubmit="yaCounter49321939.reachGoal('zamer')">
+                <input type="hidden" name="formname" value="zamer">
+                <p class="froze__title">После заявки с Вами
+                    свяжется:&nbsp;</p>
+                <div class="froze-person">
+                    <div class="froze-person__img"><img src="img/prorab.png" alt=""></div>
+                    <div class="froze-person__text">
+                        <p class="froze-person__text__title">Старший прораб</p>
+                        <p class="froze-person__text__name">Александр Гриньков</p>
+                    </div>
+                </div>
+                <p class="froze__desc">и согласует время для приезда мастера</p>
+                <div class="froze__input">
+                    <div class="main-input"><span class="icon-Phones"></span><input
+                            class="main-input__inner" required type="tel" id="tel"
+                            placeholder="+375 (**) *** ** **" name="yourPhone">
+                    </div>
+                </div>
+                <div class="froze__button">
+                    <button type="submit" class="btn">ПРИГЛАСИТЬ НА ЗАМЕР
+                        И ПОЛУЧИТЬ СМЕТУ
+                    </button>
+                </div>
+                <div class="froze__numbers">
+                    <div class="froze__numbers__item">
+                        <p class="froze__numbers__item__num">
+                            1
+                        </p>
+                        <p class="froze__numbers__item__text">
+                            Свободных
+                            замеров на
+                            сегодня
+                        </p>
+                    </div>
+                    <div class="froze__numbers__item">
+                        <p class="froze__numbers__item__num">
+                            3
+                        </p>
+                        <p class="froze__numbers__item__text">
+                            Свободных
+                            замеров на
+                            завтра
+                        </p>
+                    </div>
+                </div>
+            </form>
+            <div class="smeta pseudo">
+                <p class="smeta__title">После замера Вы получаете</p>
+                <div class="smeta__mockup"><img src="img/smeta_mockup.png" alt="">
+                   <a href="docs/smeta.pdf" target-"_blank"> <p class="smeta__mockup__desc">Посмотреть пример сметы</p></a>
+                </div>
+                <p class="smeta__text">Точный расчёт стоимости и сроков
+                    ремонта + СМЕТУ на след. день</p>
+                <p class="smeta__desc">Стоимость зафиксированная в смете закрепляется
+                    и не меняется до окончания ремонтных работ.</p>
+            </div>
+            <div class="free-calc-dir">
+                <p class="free-calc-dir__quote quote">
+                    В 99% случаем расчёт стоимости
+                    по смете соответствует реальной
+                    стоимости работ
+                </p>
+                <div class="free-calc-dir__person guy">
+                    <p class="guy__name">Евгений Гурецкий</p>
+                    <p class="guy__work">Руководитель строительной компании ГУРУ-СТРОЙ.<br>
+                        Опыт работы — 12 лет</p>
+                </div>
+                <div class="free-calc-dir__img"><img src="img/dir2.png" alt=""></div>
+            </div>
+
+        </div>
+    </div>
 </section>
 <section class="tenth-screen">
     <div class="container">
@@ -1736,7 +3262,7 @@
                         ремонт Вам
                         нужен, а
                         также на что нужно обратить внимание в первую очередь</p>
-                    <p class="steps-item__inner__link">Оставить заявку</p>
+                    <p class="steps-item__inner__link consult">Оставить заявку</p>
                 </div>
                 <div class="steps-back arrow1"></div>
             </div>
@@ -1791,17 +3317,302 @@
         </div>
     </div>
 </section>
+<section class="eleventh-screen">
+    <div class="container">
+        <h2 class="section-title section-title--black">
+            Скидки и акции от наших партнеров
+        </h2>
+        <div class="stock">
+            <div class="partners">
+                <p class="partners__title">Мы работаем с поставщиками строительных
+                    материалов напрямую, что позволит
+                    сэкономить до 20% стоимости материалов при заказе ремонта у нас!</p>
+                <div class="partners__list">
+                    <div class="partners__list__item">
+                        <div class="partners__list__item__inner">
+                            <img src="img/part8.png" alt=""></div>
+                    </div>
+                    <div class="partners__list__item">
+                        <div class="partners__list__item__inner">
+                            <img src="img/part2.png" alt=""></div>
+                    </div>
+                    <div class="partners__list__item">
+                        <div class="partners__list__item__inner">
+                            <img src="img/part3.png" alt=""></div>
+                    </div>
+                    <div class="partners__list__item">
+                        <div class="partners__list__item__inner">
+                            <img src="img/part4.png" alt=""></div>
+                    </div>
+                    <div class="partners__list__item">
+                        <div class="partners__list__item__inner">
+                            <img src="img/part5.png" alt=""></div>
+                    </div>
+                    <div class="partners__list__item">
+                        <div class="partners__list__item__inner">
+                            <img src="img/part6.png" alt=""></div>
+                    </div>
+                    <div class="partners__list__item">
+                        <div class="partners__list__item__inner">
+                            <img src="img/part7.png" alt=""></div>
+                    </div>
+                    <div class="partners__list__item">
+                        <div class="partners__list__item__inner">
+                            <img src="img/part1.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+            <div class="present">
+                <p class="present__title"><span class="present__title__bold">В ПОДАРОК</span> натяжной потолок
+                    при заказе ремонта новостройки
+                    "под ключ"</p>
+                <div class="present__mock">
+                    <div class="parallax-scene" id="scene-1">
+                        <img src="img/present_mock.png" alt="" data-depth="0.6">
+                    </div>
+                </div>
+            </div>
+            <form class="form-col pseudo" onsubmit="yaCounter49321939.reachGoal('akciya')">
+                <input type="hidden" name="formname" value="priglaszamer">
+                <p class="form-col__title">
+                    Пригласить замерщика
+                </p>
+                <p class="form-col__desc">
+                    (это БЕСПЛАТНО по Минску в радиусе 50 км)
+                </p>
+                <div class="main-input  form-col__name"><span class="icon-Woman"></span><input
+                        class="main-input__inner" type="text" id="text"
+                        placeholder="Ваше имя" name="name" required>
+                </div>
+                <div class="main-input form-col__phone"><span class="icon-Phones"></span><input
+                        class="main-input__inner" type="tel" id="tel4"
+                        placeholder="+375 (**) *** ** **" name="yourPhone" required>
+                </div>
+                <div class="form-col__button free">
+                    <button class="btn">ВЫЗВАТЬ ЗАМЕРЩИКА&nbsp;</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<footer class="twelveth-screen">
+    <div class="container-row">
+        <div class="trust">
+            <h2 class="section-title section-title--black">
+                Доверьте свой ремонт
+                профессионалам
+            </h2>
+            <div class="trust-contacts contacts">
+                <p class="contacts__title">
+                    Работаем без выходных по Минску и Минскому району
+                </p>
+                <div class="contacts-phone">
+                    <div class="contacts-phone__num">
+                        <span class="icon-Phones"></span>
+                        <a href="tel:+375291936245">+375 29 193 62 45</a>
+                    </div>
+                    <p class="contacts-phone__recall consult">
+                        Перезвоните мне
+                    </p>
+                </div>
+                <div class="contacts__mail">
+                    <span class="icon-Envelope"></span>
+                    <a href="mailto:info@guru-stroy.by" onclick="yaCounter49321939.reachGoal('mess'); return true;">info@guru-stroy.by</a>
+                </div>
+                <div class="socials--footer socials">
+                    <p class="socials__title">Свяжитесь напрямую в:
+                    </p>
+                    <div class="socials-items">
+                        <div onclick="window.open('viber://chat?number=+375291936245');" class="socials-items__item socials-items__item--viber" onclick="yaCounter49321939.reachGoal('mess'); return true;">
+                            <span class="icon-viber"></span>
+                            <p>Viber</p>
+                        </div>
+                        <div onclick="window.open('tg://resolve?domain=YauheniHuretski');" class="socials-items__item socials-items__item--tg" onclick="yaCounter49321939.reachGoal('mess'); return true;">
+                            <span class="icon-tg"></span>
+                            <p>Telegram</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="map">
+            <div id="map"></div>
+        </div>
+    </div>
+
+    <div class="other">
+        <div class="container">
+            <div class="other-left">
+                <p>Минск&nbsp; 2019</p>
+                <p>Все права защищены</p>
+            </div>
+            <div class="other-center">
+                <p>УНП 2525612526</p>
+                <p> Политика конфеденциальности</p>
+            </div>
+            <div class="other-right">
+                <p>Ремонт квартир в Минске</p>
+                <a target="_blank" href="https://paradigma.website">Guru-stroy.by</a></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- 11111111 -->
+<div class="overlay" id="modal-price" style="display: none">
+    <div class="modal-wrap">
+        <div class="close-modal">
+            <span class="icon-false"></span>
+        </div>
+        <div class="modal">
+            <div class="trigger-moadl-text">
+                ОБНОВЛЕН: <span class="data-m">25.02.2019</span>
+            </div>
+
+            <div class="modal-title">
+                Загрузите прайс-лиcт
+            </div>
+
+            <div class="modal-descr">
+                ПРАЙС ЗАГРУЗИТСЯ АВТОМАТИЧЕСКИ
+                ПОСЛЕ ЗАПОЛНЕНИЯ ДАННЫХ
+            </div>
+            <div class="modal-text">
+                <span>*</span> за номером телефона закрепляется
+                персональный доступ к прайсу
+            </div>
+
+            <form class="modal-form" onsubmit="yaCounter49321939.reachGoal('tarif')">
+                <input type="hidden" name="formname" value="price">
+                <div class="main-input input-modal-wrap"><span class="icon-Phones"></span>
+                    <input class="main-input__inner input-modal" type="tel" id="tel23" placeholder="+375 (**) *** ** **" tabindex="0" name="yourPhone" required>
+                </div>
+
+                <div class="btn-modal-wrap">
+                    <img src="img/price_mockup.png" alt="" class="modal-btn-pic">
+                    <button type="submit" class="btn modal-btn-img">
+                        СКАЧАТЬ ПРАЙС
+                    </button>
+                </div>
+                <div class="modal-text">
+                    PDF 1.6 Mb
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- 2222 -->
+<div class="overlay" id="modal-recall" style="display: none">
+    <div class="modal-wrap">
+        <div class="close-modal">
+            <span class="icon-false"></span>
+        </div>
+        <div class="modal">
+
+            <div class="modal-title">
+                Перезвоним в течение
+                10 минут
+            </div>
+
+
+            <form class="modal-form" onsubmit="yaCounter49321939.reachGoal('call')">
+                <div class="main-input  input-modal-wrap"><span class="icon-Woman"></span><input class="main-input__inner" type="text" id="text1232" placeholder="Ваше имя" name="name" required>
+                </div>
+
+                <div class="main-input input-modal-wrap"><span class="icon-Phones"></span>
+                    <input class="main-input__inner input-modal" type="tel" id="tel23" placeholder="+375 (**) *** ** **" tabindex="0" name="yourPhone" required>
+                </div>
+
+                <div class="btn-modal-wrap">
+                    <button type="submit" class="btn modal-btn">
+                        ПЕРЕЗВОНИТЕ МНЕ
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- 3333 -->
+<div class="overlay" id="modal-thanks" style="display: none">
+    <div class="modal-wrap">
+        <div class="close-modal">
+            <span class="icon-false"></span>
+        </div>
+        <div class="modal">
+            <img src="img/modal_ok.svg" alt="" class="modal-icon">
+            <div class="modal-title">
+                Спасибо за
+                проявленный интерес!
+            </div>
+            <div class="modal-descr">
+                Мы прямо сейчас обрабатываем Ваш
+                запрос и отвтетим в ближайшее рабочее
+                время Пн-Пт 9:00-20:00
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 444 -->
+<div class="overlay" id="modal-down" style="display: none">
+    <div class="modal-wrap">
+        <div class="close-modal">
+            <span class="icon-false"></span>
+        </div>
+        <div class="modal">
+            <img src="img/down.svg" alt="" class="modal-icon">
+            <div class="modal-title">
+               Загрузка началась...
+            </div>
+            <div class="modal-descr">
+                Дождитесь окончания, загрузка может
+                длиться несколько секунд
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- видео -->
+<div class="overlay" id="modal-video" style="display: none">
+    <div class="modal-video-wrap">
+        <div class="close-modal close-video">
+            <span class="icon-false"></span>
+        </div>
+        <div class="modal-video">
+
+        </div>
+    </div>
+</div>
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/jquery.maskedinput.min.js"></script>
 <script src="js/ui.js"></script>
 <script src="js/jquery.ui.touch-punch.min.js"></script>
 <script src="js/slick.min.js"></script>
-<script src="js/jquery.fancybox.min.js"></script>
+<script src="js/fancybox/jquery.fancybox.pack.js"></script>
 <script src="js/sly.js"></script>
+<script src="js/parallax.js"></script>
 <script src="js/spin.js"></script>
-<script src="js/fotorama.js"></script>
-<script src="js/test.js"></script>
-<script src="js/script.js"></script>
+<script src="js/test.js?v=1.2"></script>
+<script type="text/javascript" charset="utf-8" async
+        src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A64c6a8e939d7cd6bb70dd1fc31c81aae8f69fa2c201b61090e5cb31c3b9566c1&amp;width=100%25%&amp;lang=ru_RU&amp;scroll=true&amp;id=map"></script>
+<script src="js/script.js?v=1.2"></script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
+   ym(49321939, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true,
+        ecommerce:"dataLayer"
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/49321939" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 </body>
 </html>

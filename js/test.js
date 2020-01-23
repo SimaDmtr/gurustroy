@@ -1,440 +1,439 @@
-$(function () {
-    /**
-     * Настройка слайдера
-     *
-     * Подробная информация:
-     * http://kenwheeler.github.io/slick/#settings
-     */
-    var testSliderOptions = {
-        arrows: false,
-        dots: false,
-        draggable: false,
-        infinite: false,
-        swipe: false,
-        name: 'mainSlider',
-        adaptiveHeight: true,
-        fade: true,
-        cssEase: 'linear'
+
+
+var number = 0;
+var maxNumber = $(".test-slider__item").length;
+var $element = $(".test-slider__item").find("input, select, textarea");
+var btnPrev = $(".prev-test");
+var btnNext = $('.next-test');
+var testTextNum = 6;
+var testText = $('.test__img-count');
+
+var isValid;
+var dataBlock;
+var activeSlede = [];
+$(".test-item__number-furst").text(number + 1);
+$(".test-item__number-all").text("/ " + (maxNumber - 1));
+testText.text(testTextNum +' вопросов');
+for(var i = 0; i< maxNumber; i++){
+  activeSlede[i] = false;
+}
+
+$element.on('change input', function (e) {
+  var value = $(this).val().trim();
+  isValid = value !== "";
+  btnActive(!isValid);
+  $(".text-subbtn").hide();
+});
+
+function btnActive(isValid) {
+  if(number === 0){
+    btnPrev.prop('disabled', 'false');
+    btnNext.prop('disabled', isValid);
+  }else{
+    btnPrev.prop('disabled', false);
+    if(activeSlede[number] === true || isValid === false){
+      btnNext.prop('disabled', false);
+    }else{
+      btnNext.prop('disabled', true);
     }
+    
+  }
 
-    var innerSliderOptions = {
-        dots: false,
-        slidesToShow: 4,
-        infinite: false,
-        adaptiveHeight: true,
-        // Настройка слайдера на разрешение экрана, чем меньше экран
-        // тем меньше слайдов на одном слайдере
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 2,
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 2,
-                }
-            }
-        ]
+}
+
+// sidebar
+
+
+  function progress(num){
+    var testBlock = ".test-block-" + num ;
+    var testCircle= ".test-circle-" + (num + 1) ;
+    $(testBlock).addClass('test-block-active');
+    $(testCircle).addClass('test-circle-active');
+  }
+  progress(0);
+
+
+  
+// btn
+
+function btnClick() {
+
+  btnPrev.on('click', function(event) {
+    event.preventDefault();
+    --number;
+    $(".test-slider__item").hide();
+    $(".test-slider__item").eq(number).fadeIn();
+    btnActive(!isValid);
+
+    $(".test-item__number-furst").text(number + 1);
+    // уцкукцук
+
+      if(testTextNum != 1){
+      testTextNum += 1;
+      if(testTextNum < 5 && testTextNum > 1){
+        testText.text( testTextNum + ' вопросa');
+      }else if(testTextNum < 2){
+        testText.text( testTextNum + ' вопрос');
+      }else{
+        testText.text( testTextNum + ' вопросов');
+      }
+      // $('.test__img-title').show();
+      // $('#present_img').attr({
+      //     "src": 'img/present_big.png',
+      //   });
+    }else{
+      $('#present_img').attr({
+        "src": 'img/q_present.png',
+      });
+      testText.text('Ваш подарок');
+      $('.test__img-title').hide();
+      $('.test__img-price').hide();
     }
-    // Инициализируем наш слайдер с нашими тестами
-    var $testSlider = $(".test-slider");
-    $testSlider.slick(testSliderOptions); // Инициализируем сам слайдер
-
-
-    // var innerSlider = $(".inner-form-slider").slick(innerSliderOptions);
-    // Узнаём длину слайдера для прогрес бара
-    var $testSliderItem = $(".test-slider .test-slider__item");
-    var testSliderLength = $testSliderItem.length;
-
-    // Это кнопка позволяющая переключиться на следующий тест
-    var $nextTestButton = $(".next-test");
-    var $prevTestButton = $(".prev-test");
-    // Изначально отключаем все кнопки
-    $nextTestButton.prop('disabled', true);
-    // Вызываем функцию изменения прогресс бара по умолчанию 0
-    changeProgressBar(0);
-    checkInputValidation(0);
-
-
-    // последний слайд
-    $('.test-slider__form input').on('change, input, keyup', function (event) {
-        if ($(this).attr('name') === 'name' && $(this).val().trim().length > 4) {
-            $("input[name='name']").css({
-                "border-bottom": '2px solid #e5e5e5',
-            });
-
-        } else if ($(this).attr('name') === 'phone' && $(this).val().length > 12) {
-            $("input[name='phone']").css({
-                "border-bottom": '2px solid #e5e5e5',
-            });
-        }
-    });
-    // var endPrice = 0;
-    // По нажатию на кнопку переключиться на следующий слайд
-    $nextTestButton.on('click', function (event) {
-        if (!$(this).hasClass('submit') && !$(this).hasClass('end-btn')) {
-            event.preventDefault();
-            $testSlider.slick('slickNext');
-
-        } else if ($(this).hasClass('submit')) {
-
-            if ($(this).parents('.test-slider__item').find('.test-slider__form').find("input[name='name']").val().trim().length < 4
-                && $(this).parents('.test-slider__item').find('.test-slider__form').find("input[name='phone']").val().trim().length < 13) {
-
-                $("input[name='name']").css({
-                    "border-bottom": '2px solid #f44336',
-                });
-
-                $("input[name='phone']").css({
-                    "border-bottom": '2px solid #f44336',
-                });
-
-                $(".submit").attr({
-                    "disabled": 'true',
-                });
-
-            } else if ($(this).parents('.test-slider__item').find('.test-slider__form').find("input[name='name']").val().trim().length < 4) {
-                $("input[name='name']").css({
-                    "border-bottom": '2px solid #f44336',
-                });
-            } else if ($(this).parents('.test-slider__item').find('.test-slider__form').find("input[name='phone']").val().trim().length < 13) {
-                $("input[name='phone']").css({
-                    "border-bottom": '2px solid #f44336',
-                });
-            } else {
-                $('.test-item__number-text').text("готово!");
-                // $testSlider.slick('slickNext');
-            }
-
-        } else if ($(this).hasClass('end-btn')) {
-            event.preventDefault();
-            $('.test-item__number-furst, .test-item__number-all').hide();
-            $('.test-item__number-text').show();
-            $testSlider.slick('slickNext');
-
-        }
-        // var sliderM = $(".test-slider");
-        // var oneBlocH = $(".test-slider_item-end").outerHeight();
-        // sliderM.css({"height": oneBlocH});
-    });
-
-    $nextTestButton.keydown(function (event) {
-        if (event.keyCode == 13 || event.keyCode == 32) {
-            event.preventDefault();
-            return false;
-        }
-    });
-
-    /**
-     * @param {Event} event Событие
-     * @param {slick} slick Текущий слайдер над котором ведётся действие
-     * @param {Number} oldIndex предыдущий индекс слайда
-     * @param {Number} newIndex новый индекс слайда
-     * Данная функция вызывается когда мы переключаемся на следующий слайд
-     */
-    function nextSlide(event, slick, oldIndex, newIndex) {
-        if (slick.options.name === 'mainSlider') {
-            changeProgressBar(newIndex);
-            checkInputValidation(newIndex);
-        }
+    
+    // 2123213123213213312323
+    progress(number);
+    animateTop ();
+    if(btnNext.prop('disabled')){
+      $(".text-subbtn").show();
+    }else{
+      $(".text-subbtn").hide();
     }
+  });
 
-    $testSlider.on('beforeChange', nextSlide);
+  btnNext.on('click', function(event) {
+    event.preventDefault();
+    activeSlede[number] = true;
 
-    /**
-     *
-     * @param {Number} currentIndex Текущий индекс слайдера
-     *
-     * Данная функция меняет шкалу прогресса в зависимости
-     * на каком вопросе находится пользователь
-     */
-    var numberAll = $testSlider.slick('getSlick').slideCount;
-    if (numberAll < 10) {
-        numberAll = '0' + numberAll;
-    } else {
-        numberAll = numberAll;
-    }
-    $(".test-item__number-all").text('/ ' + numberAll);
+    ++number;
+    // уцкукцук
 
-    function changeProgressBar(currentIndex) {
-        var elementNumber = currentIndex + 1;
-        var percent = elementNumber * 100 / testSliderLength + "% выполнено";
-        var $bar = $(".test-progress");
-        $bar.text(percent);
-
-        var lineClass = ".test-block"
-        var circleClass = ".test-circle"
-        var numberLine = $(lineClass + '-' + (currentIndex));
-        var numberCircle = $(circleClass + '-' + (currentIndex + 1));
-        var numbFirst;
-        if (elementNumber < 10) {
-            numbFirst = '0' + elementNumber;
-        } else {
-            numbFirst = elementNumber;
-        }
-        $(".test-item__number-furst").text(numbFirst);
-        numberLine.addClass('test-block-active');
-        numberCircle.addClass('test-circle-active');
-        var numProc = $(".test__img-count");
-        var numberAll = $testSlider.slick('getSlick').slideCount - 1;
-        if (currentIndex === 0) {
-            numProc.text(numberAll - 2 + " вопросов");
-        } else if (currentIndex === 1) {
-            numProc.text((numberAll - 3 + " вопросов"));
-        } else if (currentIndex === 2) {
-            numProc.text((numberAll - 4 + " вопроса"));
-        } else if (currentIndex === 3) {
-            numProc.text((numberAll - 5 + " вопроса"));
-        } else if (currentIndex === 4) {
-            numProc.text((numberAll - 6 + " вопроса"));
-        } else if (currentIndex === 5) {
-            numProc.text((numberAll - 7 + " вопрос"));
-        } else {
-            numProc.text(6 + "%");
-        }
-
-    }
-
-
-    /**
-     *
-     * @param {Number} index Индекс проверяемого теста
-     *
-     * Данная функция проверят ввёл ли пользователь данные
-     * в поля ввода или выбрал тот или иной выбор или чекбокс
-     */
-    function checkInputValidation(index) {
-        var $element = $testSliderItem.eq(index);
-        var $elementInputs = $element.find("input, select, textarea");
-        var $nextButton = $element.find("button.next-test:eq(0)");
-        $elementInputs.on('change input', function (e) {
-            var value = $(this).val().trim();
-            var isValid = value !== "";
-            $nextButton.prop('disabled', !isValid);
-
+      if(testTextNum != 1){
+      testTextNum -= 1;
+      if(testTextNum < 5 && testTextNum > 1){
+        testText.text( testTextNum + ' вопросa');
+      }else if(testTextNum < 2){
+        testText.text( testTextNum + ' вопрос');
+      }else{
+        testText.text( testTextNum + ' вопросов');
+      }
+      $('.test__img-title').show();
+      $('#present_img').attr({
+          "src": 'img/present_big.png',
         });
-        $(".ui-slider-handle").on("click, change, mouseenter", function () {
-            var isValid = true;
-            $nextButton.prop('disabled', !isValid);
-        });
+    }else{
+      // $('#present_img').attr({
+      //   "src": 'img/q_present.png',
+      // });
+      // testText.text('Ваш подарок');
+      // $('.test__img-title').hide();
+    }
+    
+    // 2123213123213213312323
+
+    $(".test-slider__item").hide();
+    $(".test-slider__item").eq(number).fadeIn(1000);
+    btnActive(!isValid);
+    if(activeSlede[number] === true){
+      btnNext.prop('disabled', false);
+    }else{
+      btnNext.prop('disabled', true);
     }
 
+    if(number === maxNumber - 1){
+      $('.test__btn-block').hide();
+      (".text-subbtn").hide();
+      // var presents;
+      // var present = $(".test-slider__item").eq(maxNumber - 2).find('input').attr('checked');
+      // $(".test-slider__item").eq(maxNumber - 2).find('input').each(function(index, el) {
+      //   if($(this).prop("checked") === true){
+      //     presents = $(this).val().trim().toLowerCase();
+      //   }
+      // });
 
-    /**
-     * Запрещаем ввод знаков 'e' и '+' в поле ввода для чисел
-     */
-    $("input[type='number']").on('keypress', function (e) {
-        var kcd = e.keyCode;
-        if (kcd === 43 || kcd === 101) return false;
-    });
-
-    /**
-     *
-     * @param {NodeSelector} $form принимает на себя форму
-     *
-     * Данная функция берет данные с формы и меняет его на
-     * объект JS
-     *
-     */
-    function getFormDataObject($form) {
-        var seializedArray = $form.serializeArray();
-        var formDataObject = {};
-        $.map(seializedArray, function (n, i) {
-            formDataObject[n['name']] = n['value'];
-        });
-        return formDataObject;
+      // if(presents === 'подарок 1'){
+      //   testText.text('Ваш подарок КНИГА');
+      //   $(".test__img-price").text("Цена: 2500 р");
+      //   $('#present_img').attr({
+      //     "src": 'img/present_big.png',
+      //   });
+      // }else  if(presents === 'подарок 2'){
+      //   testText.text('Ваш подарок КНИГА 2');
+      //   $(".test__img-price").text("Цена: 2300 р");
+      //   $('#present_img').attr({
+      //     "src": 'img/present_big.png',
+      //   });
+      // }else  if(presents === 'подарок 3'){
+      //   testText.text('Ваш подарок КНИГА 3');
+      //   $(".test__img-price").text("Цена: 2100 р");
+      //   $('#present_img').attr({
+      //     "src": 'img/present_big.png',
+      //   });
+      // }
     }
 
+     if(number === maxNumber - 2){
+        $(".test__img-title").hide();
+        testText.text('Ваш подарок');
+        $('#present_img').attr({
+          "src": 'img/q_present.png',
+        });
+     }
+    $(".test-item__number-furst").text(number + 1);
+
+    progress(number);
+
+    animateTop ();
+
+    if(btnNext.prop('disabled')){
+      $(".text-subbtn").show();
+    }else{
+      $(".text-subbtn").hide();
+    }
+    
+  });
+
+}
+btnClick();
+var presents;
+$(".test-presents-slide").find('input').on('input change', function() {
+    if($(this).val().trim() !== ""){
+    //   presents = $(this).val().trim().toLowerCase(); customRadio__img
+      presents = $(this).parents('.test-slider__elem').index();
+    }
+    $('.test__img-price').show();
+    if(presents === 0){
+      testText.text('Картина нитью(стоимостью 299 рублей)');
+    //   $(".test__img-price").text("Цена: 2500 р");
+      $('#present_img').attr({
+        "src": 'img/item7_1.jpg',
+      });
+    }else  if(presents === 1){
+      testText.text('Фотосъемка помещения после ремонта');
+    //   $(".test__img-price").text("Цена: 2300 р");
+      $('#present_img').attr({
+        "src": 'img/item7_2.jpg',
+      });
+    }else  if(presents === 2){
+      testText.text('Консультация руководителя');
+    //   $(".test__img-price").text("Цена: 2100 р");
+      $('#present_img').attr({
+        "src": 'img/item7_3.jpg',
+      });
+    }
 });
 
 
-//  test page
 
-if ($("body").find(".test").length > 0) {
+function animateTop (){
+  var elem = $('.test-item__desc');
+  var top = elem.offset().top - 15;
+  $('body,html').animate({scrollTop: top}, 400);
+}
 
-    // tooltip
-
-    var tooltipWidth = $(".question-test").parents(".customRadio_label").outerWidth();
-    var positionLeft,
-        positionTop,
-        toolBool = false,
-        titleToolbox,
-        subtitleToolbox,
-        descrToolbox,
-        priceToolbox;
-
-    function tooltipShow() {
-        toolBool = true;
-        $(this).addClass('question-active');
-        tooltipWidth = $(this).parents(".customRadio_label").outerWidth();
-
-        positionLeft = Math.floor($(this).parents(".customRadio_label").offset().left);
-
-        positionTop = Math.floor($(this).parents(".customRadio_label").offset().top + $(this).parents(".customRadio_label").outerHeight() + 5);
-
-
-        titleToolbox = $(this).parents(".test-slider__elem").find(".data-hide__title").text().trim();
-        subtitleToolbox = $(this).parents(".test-slider__elem").find(".data-hide__subtitle").text().trim();
-        descrToolbox = $(this).parents(".test-slider__elem").find(".data-hide__descr").text().trim();
-        priceToolbox = $(this).parents(".test-slider__elem").find(".data-hide__price").text().trim();
-
-        $(".tooltip-test__title").text(titleToolbox);
-        $(".tooltip-test__subtitle").text(subtitleToolbox);
-        $(".tooltip-test__descr").text(descrToolbox);
-        $(".tooltip-test__trigger").text(priceToolbox);
-
-        toolIsShow();
-    }
-
-    function objTooltip() {
-        if ($(window).width() > 991) {
-            $(".question-test").hover(tooltipShow, function () {
-
-                $(".tooltip-test").on("mouseenter", function () {
-                    $(this).addClass('showTooltip');
-                    toolBool = true;
-                    toolIsShow();
-                });
-
-                setTimeout(function () {
-                    if (!$(".tooltip-test").hasClass('showTooltip')) {
-                        toolBool = false;
-                        $(".question-test").removeClass('question-active');
-                        toolIsShow();
-                    }
-                }, 150);
-
-
-            });
-
-        } else {
-            $(".question-test").on("click", function () {
-                if ($(this).hasClass('mobile-act')) {
-                    $(".question-test").removeClass('mobile-act');
-                    toolBool = false;
-                    $(this).removeClass('showTooltip');
-                    $(".question-test").removeClass('question-active');
-                    toolIsShow();
-                } else {
-                    $(".question-test").removeClass('mobile-act');
-                    $(this).addClass('mobile-act');
-                    toolBool = true;
-                    $(".question-test").removeClass('question-active');
-                    $(this).addClass('question-active');
-                    tooltipWidth = $(this).parents(".customRadio_label").outerWidth();
-
-                    positionLeft = Math.floor($(this).parents(".customRadio_label").offset().left);
-
-                    positionTop = Math.floor($(this).parents(".customRadio_label").offset().top + $(this).parents(".customRadio_label").outerHeight() + 5);
-
-
-                    titleToolbox = $(this).parents(".test-slider__elem").find(".data-hide__title").text().trim();
-                    subtitleToolbox = $(this).parents(".test-slider__elem").find(".data-hide__subtitle").text().trim();
-                    descrToolbox = $(this).parents(".test-slider__elem").find(".data-hide__descr").text().trim();
-                    priceToolbox = $(this).parents(".test-slider__elem").find(".data-hide__price").text().trim();
-
-                    $(".tooltip-test__title").text(titleToolbox);
-                    $(".tooltip-test__subtitle").text(subtitleToolbox);
-                    $(".tooltip-test__descr").text(descrToolbox);
-                    $(".tooltip-test__trigger").text(priceToolbox);
-
-                    toolIsShow();
-                }
-            });
-        }
-    }
-
-
-    objTooltip();
-
-
-    function toolIsShow() {
-        if (toolBool) {
-            $(".tooltip-test").css({
-                "width": tooltipWidth,
-                "visibility": 'visible',
-                "transform": 'translate(' + positionLeft + 'px,' + positionTop + 'px)',
-                "opacity": '1',
-
-            });
-        } else {
-            $(".tooltip-test").css({
-                "visibility": 'hidden',
-                "transform": 'translate(' + (positionLeft + getRandomInt(-100, 100)) + 'px,' + (positionTop + getRandomInt(-100, 100)) + 'px)',
-                "opacity": '0',
-            });
-        }
-    }
-
-
-    $(".tooltip-test").on("mouseleave", function () {
-        toolBool = false;
-        $(this).removeClass('showTooltip');
-        $(".question-test").removeClass('question-active');
-        toolIsShow();
-    });
-
-
-    function getRandomInt(min, max) {
-        return Math.floor(Math.random() * (max - min + 1)) + min;
-    }
-
-
-    // slider
-    $("#number-slider").slider({
+// slider
+    $( "#number-slider" ).slider({
         animate: "slow",
-        range: "min",
+        range: "min",    
         value: 70,
         max: 1000,
-        slide: function (event, ui) {
-            $("#send-result-polzunok").val(ui.value);
-        }
+        slide : function(event, ui) {    
+              $("#send-result-polzunok").val(ui.value); 
+              $(".text-subbtn").hide();  
+          }
     });
     $("#send-result-polzunok").val($("#number-slider").slider("value"));
     var crdVal;
-    $("#send-result-polzunok").on('keyup', function (event) {
-        crdVal = $('#send-result-polzunok').val().trim();
+    $("#send-result-polzunok").on('keyup', function(event) {
+      crdVal = $('#send-result-polzunok').val().trim();
 
-        if (parseInt(crdVal) > 1000) {
-            $('#send-result-polzunok').val(1000);
-        }
+      if(parseInt(crdVal) > 1000){
+        $('#send-result-polzunok').val(1000);
+      }
 
-        if (this.value.match(/[^0-9]/g)) {
-            this.value = this.value.replace(/[^0-9]/g, '');
-        }
-        $("#number-slider").slider("value", $(this).val());
+      if (this.value.match(/[^0-9]/g)) {
+        this.value = this.value.replace(/[^0-9]/g, '');
+      }
+      $( "#number-slider" ).slider( "value", $(this).val() );
     });
 
-    $("#send-result-polzunok").on("change , input", function () {
-        if (crdVal === '') {
-            $('#send-result-polzunok').val(0);
-        }
+    $("#send-result-polzunok").on("change , input", function(){
+      if(crdVal === ''){
+        $('#send-result-polzunok').val(0);
+      }
     });
 
-    $("#no").on('change input', function () {
-        if ($(this).prop('checked')) {
-            $("#number-slider").slider("value", 0);
-            $("#number-slider").slider("disable");
-            $("#send-result-polzunok").val("0").attr({'disabled': 'disabled'});
-        } else {
-            $("#number-slider").slider("enable");
-            $("#send-result-polzunok").removeAttr('disabled');
-        }
+    $("#no").on('change input', function() {
+      if($(this).prop('checked')){
+        $( "#number-slider" ).slider( "value", 0 );
+        $( "#number-slider" ).slider( "disable" );
+        $("#send-result-polzunok").val("0").attr({'disabled':'disabled'});
+      }else{
+        $( "#number-slider" ).slider( "enable" );
+        $("#send-result-polzunok").removeAttr('disabled');
+      }
     });
-    var elems = $('.test-slider__elem-big,.test-slider__elem');
-    $(elems).click(function () {
-        $(elems).removeClass('checked');
-        $(this).addClass('checked');
-    })
+
+
+  $( "#number-slider" ).slider({
+      change: function( event, ui ) {
+        btnNext.prop('disabled', false); }
+  });
+
+
+
+
+
+$('form').submit(function(event) {
+
+      event.preventDefault();
+
+      var action = "mailer/smart.php";
+      var msg = $(this).serialize();
+      var formThis = $(this);
+
+      $.ajax({
+          type: "POST",
+          url: action,
+          data: msg,
+          success: function(data) {
+
+
+              if(formThis.find('input[type="hidden"]').val() === "price" ){
+                var link = document.createElement('a');
+                link.setAttribute('href', "docs/price.docx");
+                link.setAttribute('target', "_blank");
+                link.setAttribute('download','price');
+                // onload=link.click();
+
+                  if(navigator.userAgent.indexOf('Mac') > 0){
+                    
+                    window.location = "docs/price.docx"
+                  }else{
+                    simulate( link, "click");
+
+                  }
+
+                $(".overlay").fadeOut();
+                $('body,html').addClass('stop');
+                $("#modal-down").fadeIn();
+
+              }else if(formThis.find('input[type="hidden"]').val() === "predlojenie" ){
+                var link = document.createElement('a');
+                link.setAttribute('href', "docs/predlojenie.docx");
+                link.setAttribute('target', "_blank");
+                link.setAttribute('download','predlojenie');
+
+                if(navigator.userAgent.indexOf('Mac') > 0){
+                    window.location = "docs/predlojenie.docx";
+                  }else{
+                    simulate( link, "click");
+                  }
+
+                $('body,html').addClass('stop');
+                $(".overlay").fadeOut();
+                $("#modal-down").fadeIn();
+
+              }else if(formThis.find('input[type="hidden"]').val() === "rykovod"){
+                $(".overlay").fadeOut();
+                $('html').addClass('stop');
+                $("#modal-thanks").fadeIn();
+              }else if(formThis.find('input[type="hidden"]').val() === "zamer"){
+                $(".overlay").fadeOut();
+                $('html').addClass('stop');
+                $("#modal-thanks").fadeIn();
+              }else if(formThis.find('input[type="hidden"]').val() === "priglaszamer"){
+                $("#modal-thanks").fadeIn();
+                $('html').addClass('stop');
+              }else if(formThis.find('input[type="hidden"]').val() === "test"){
+                $("#modal-thanks").fadeIn();
+                $('html').addClass('stop');
+                formThis.find('input').attr({
+                  'disabled': 'true',
+                });
+                formThis.find('button').attr({
+                  'disabled': 'true',
+                });
+                formThis.find('.input-label').css({'background': 'transparent'});
+                $('.test-prev , .test-next').attr({
+                  'disabled': 'true',
+                });
+              }else{
+                $(".overlay").fadeOut();
+                $('body,html').addClass('stop');
+                $("#modal-thanks").fadeIn();
+              }
+
+              $('form').trigger('reset');
+
+
+          },
+          error: function(xhr, str) {
+
+              alert('Произошла ошибка, попробуйте немного позже');
+          }
+      });
+  });
+
+// ---------------------
+
+function simulate(element, eventName)
+{
+    var options = extend(defaultOptions, arguments[2] || {});
+    var oEvent, eventType = null;
+
+    for (var name in eventMatchers)
+    {
+        if (eventMatchers[name].test(eventName)) { eventType = name; break; }
+    }
+
+    if (!eventType)
+        throw new SyntaxError('Only HTMLEvents and MouseEvents interfaces are supported');
+
+    if (document.createEvent)
+    {
+        oEvent = document.createEvent(eventType);
+        if (eventType == 'HTMLEvents')
+        {
+            oEvent.initEvent(eventName, options.bubbles, options.cancelable);
+        }
+        else
+        {
+            oEvent.initMouseEvent(eventName, options.bubbles, options.cancelable, document.defaultView,
+            options.button, options.pointerX, options.pointerY, options.pointerX, options.pointerY,
+            options.ctrlKey, options.altKey, options.shiftKey, options.metaKey, options.button, element);
+        }
+        element.dispatchEvent(oEvent);
+    }
+    else
+    {
+        options.clientX = options.pointerX;
+        options.clientY = options.pointerY;
+        var evt = document.createEventObject();
+        oEvent = extend(evt, options);
+        element.fireEvent('on' + eventName, oEvent);
+    }
+    return element;
 }
 
+function extend(destination, source) {
+    for (var property in source)
+      destination[property] = source[property];
+    return destination;
+}
 
+var eventMatchers = {
+    'HTMLEvents': /^(?:load|unload|abort|error|select|change|submit|reset|focus|blur|resize|scroll)$/,
+    'MouseEvents': /^(?:click|dblclick|mouse(?:down|up|over|move|out))$/
+}
+var defaultOptions = {
+    pointerX: 0,
+    pointerY: 0,
+    button: 0,
+    ctrlKey: false,
+    altKey: false,
+    shiftKey: false,
+    metaKey: false,
+    bubbles: true,
+    cancelable: true
+}
+// -----------------------
